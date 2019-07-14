@@ -585,7 +585,7 @@ body{
 
 /** MenuBlock **/
 .block.menu{
-
+  height: auto;
 }
 
 .menu .topBorder{
@@ -667,7 +667,6 @@ body{
   background-position: center;
 }
 
-
 .backgroundFoodsImage{
   max-height: 100%;
   object-fit: contain;
@@ -681,6 +680,10 @@ body{
 
 .toZoomImageBlock:hover .backgroundFoodsImage{
   transform: translate(-50%,0) scale(1.2);
+}
+
+.menu .defaultButton{
+  margin: 25px auto 50px;
 }
 
 /** StatisticBlock **/
