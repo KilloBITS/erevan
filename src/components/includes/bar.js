@@ -2,6 +2,9 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 class Bar extends React.Component {
+  toTopPosition(){
+    document.getElementById('root').scrollTo({top: 0, behavior: 'smooth'});
+  }
   render() {
     return <div className="bar" id="NavigationBar">
       <div className={(this.props.open)?"openMenuButton open":"openMenuButton"} id="openMenuButton">
@@ -16,7 +19,13 @@ class Bar extends React.Component {
         <div className="socialBtn">
           <a target="_blank" href={this.props.socials.facebook} rel="noopener noreferrer"><FontAwesomeIcon icon={['fab', 'facebook']} /></a>
         </div>
+      </div>
 
+      <div className={(this.props.top > 800)?"navigatorBtn socialsBtn":"navigatorBtn socialsBtn hide"}>
+        <FontAwesomeIcon icon={['fas', 'align-center']}/>
+      </div>
+      <div className={(this.props.top > 800)?"navigatorBtn totop":"navigatorBtn totop hide"} onClick={this.toTopPosition.bind(this)}>
+        <FontAwesomeIcon icon={['fas', 'arrow-up']}/>
       </div>
     </div>
   }

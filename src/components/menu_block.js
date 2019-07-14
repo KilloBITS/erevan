@@ -29,6 +29,9 @@ class MenuBlock extends React.Component {
       <div className="menuContentBlock">
         {parseMenuBlocs(this.props.data.foodsCategory)}
       </div>
+      <div className="defaultButton">
+        Переглянути повне меню
+      </div>
     </div>
   }
 }

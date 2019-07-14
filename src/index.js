@@ -4,6 +4,7 @@ import Pace from 'react-pace-progress'
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
+import { far } from '@fortawesome/free-regular-svg-icons';
 import { faCheckSquare, faCoffee , fas} from '@fortawesome/free-solid-svg-icons';
 
 //Styles
@@ -20,6 +21,7 @@ import AboutBlock from './components/about_block.js';
 import MenuBlock from './components/menu_block.js';
 import StatisticBlock from './components/statistic_block.js';
 
+import FooterBlock from './components/footer_block.js'
 library.add(fab, faCheckSquare, faCoffee, fas);
 
 class Erevan extends React.Component{
@@ -90,7 +92,26 @@ class Erevan extends React.Component{
         subTitle:'про нас',
         slogan:'ЯКЩО ТИ СПРАВЖНІЙ ГУРМАН - ЗАВІТАЙ У ЄРЕВАН !',
         aboutText:`Ресторан вірменської, авторської кухні (долма, хачапурі, сациві, шашлик та лаваш) у супроводі неймовірного вина, зустріне кожного гостя в особливих традиціях чудового Кавказу. Під запальну музику відкриє для Вас незабутню подорож в саме серце Вірменії - Єреван. Запашна зелень, грандіозно-ніжні сири, соковито-яскраві овочі, ідеально-ароматне м'ясо не залишить Вас байдужими. А національні вірменські солодощі будуть до смаку кожному. Дружня, затишна атмосфера, чудова музика, гастрономічне задоволення від вірменської кухні та смачного вина, створять для Вас незабутні враження про мандрівку у Вірменію.
-        Також, їжу можна замовити онлайн, через сервіс Glovo.`
+        Також, їжу можна замовити онлайн, через сервіс Glovo.`,
+        miniData: [
+          {
+            title:'Є побажання?',
+            text:`restoran.erevan@gmail.com`,
+            icon: isLocation+'/icons/dialog.svg'
+          },
+          {
+            title:'Адреса',
+            text:`м.Львів,
+            вул.Митрополита Андрея 8`,
+            icon: isLocation+'/icons/location.svg'
+          },
+          {
+            title:'Телефон',
+            text:`+38 (032) 237 77 21
+            +38 (098) 174 24 00`,
+            icon: isLocation+'/icons/smartphone.svg'
+          }
+        ]
       },
       menuBlock: {
         title:'< Наше меню >',
@@ -168,7 +189,7 @@ class Erevan extends React.Component{
     let scrollTop = document.getElementById('root').scrollTop;
     this.setState({
       scrollTop:scrollTop,
-      menuBlockTop: document.getElementById('MenuBlock').offsetTop - document.body.offsetHeight + 100
+      menuBlockTop: document.getElementById('MenuBlock').offsetTop - document.body.offsetHeight + 50
     });
   }
 
@@ -176,11 +197,12 @@ class Erevan extends React.Component{
     return <div className="content" id="content">
       {this.state.preloader ? <Pace color="#27ae60" height={3}/> : null }
       <PreloaderBlock status={this.state.preloader} loader={this.state.loader} logotype={this.state.logotype}/>
-      <NavigationBarBlock openedMenu={this.state.openedMenu} socials={this.state.socials}/>
+      <NavigationBarBlock openedMenu={this.state.openedMenu} socials={this.state.socials} top={this.state.scrollTop}/>
       <HeadBlock top={this.state.scrollTop} data={this.state.headBlock} menu={this.state.menu} bigMainLogo={this.state.bigMainLogo} logotype={this.state.logotype}/>
-      <AboutBlock data={this.state.aboutBlock} foodIcon={this.state.foodIcon}/>
+      <AboutBlock data={this.state.aboutBlock} socials={this.state.socials}/>
       <MenuBlock data={this.state.menuBlock} top={this.state.scrollTop} menuBlockTop={this.state.menuBlockTop}/>
       <StatisticBlock data={this.state.statisticBlock}/>
+      <FooterBlock/>
     </div>
   }
 }
