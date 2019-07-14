@@ -1,5 +1,16 @@
 import React from 'react';
+import Title from './includes/title.js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+let parseMenuBlocs = (arr) => {
+  const menu = arr.map((a, key) => <div key={key} className="toZoomImageBlock menuCategoryBlock">
+    <div className="backgroundFitBlock">
+      <img src={a.background} alt={a.title} className="backgroundFoodsImage"/>
+    </div>
+    <div className="menuFoodsTitle">{a.title}</div>
+  </div>);
+  return menu
+}
 
 class MenuBlock extends React.Component {
   render() {
@@ -10,6 +21,13 @@ class MenuBlock extends React.Component {
            <path fill="#E9E9E9" d="M293.5,78c-131.4,32.4-251.3,33-359.7,1.7v154.1h1544v-177C1438.6,62,1398.3,68.9,1357,78
           C980.9,160.6,956.5-85.5,293.5,78z"/>
         </svg>
+      </div>
+      <Title foodIcon={this.props.foodIcon} title={this.props.data.title} subtitle={this.props.data.subTitle} color="#e9e9e9" subcolor="rgba(232, 232, 232, 0.1)"/>
+      <div className="slogan">
+        {this.props.data.slogan}
+      </div>
+      <div className="menuContentBlock">
+        {parseMenuBlocs(this.props.data.foodsCategory)}
       </div>
     </div>
   }

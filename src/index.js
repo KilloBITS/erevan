@@ -18,6 +18,7 @@ import NavigationBarBlock from './components/includes/bar.js';
 import HeadBlock from './components/head_block.js';
 import AboutBlock from './components/about_block.js';
 import MenuBlock from './components/menu_block.js';
+import StatisticBlock from './components/statistic_block.js';
 
 library.add(fab, faCheckSquare, faCoffee, fas);
 
@@ -81,15 +82,73 @@ class Erevan extends React.Component{
             text:'Неповторну атмосферу у закладі створює традиційна вірменська музика'
           }
         ],
-        background_1: isLocation+'/bg_el_1.png',
+        background_1: isLocation+'/bg_el_1.svg',
         background_2: isLocation+'/bg_el_2.png'
       },
       aboutBlock: {
-        title:'ПРО НАС',
+        title:`< ПРО НАС >`,
         subTitle:'про нас',
         slogan:'ЯКЩО ТИ СПРАВЖНІЙ ГУРМАН - ЗАВІТАЙ У ЄРЕВАН !',
         aboutText:`Ресторан вірменської, авторської кухні (долма, хачапурі, сациві, шашлик та лаваш) у супроводі неймовірного вина, зустріне кожного гостя в особливих традиціях чудового Кавказу. Під запальну музику відкриє для Вас незабутню подорож в саме серце Вірменії - Єреван. Запашна зелень, грандіозно-ніжні сири, соковито-яскраві овочі, ідеально-ароматне м'ясо не залишить Вас байдужими. А національні вірменські солодощі будуть до смаку кожному. Дружня, затишна атмосфера, чудова музика, гастрономічне задоволення від вірменської кухні та смачного вина, створять для Вас незабутні враження про мандрівку у Вірменію.
         Також, їжу можна замовити онлайн, через сервіс Glovo.`
+      },
+      menuBlock: {
+        title:'< Наше меню >',
+        subTitle:'наше меню',
+        slogan: 'Відчуй на смак традиції Вірменії у серці Львова',
+        foodsCategory: [
+          {
+            id: 0,
+            title: 'ХОЛОДНІ ЗАКУСКИ',
+            description: '',
+            background:  isLocation+'/categories/Salo.jpg'
+          },
+          {
+            id: 1,
+            title: 'CАЛАТИ',
+            description: '',
+            background:  isLocation+'/categories/Chahtoni.jpg'
+          },
+          {
+            id: 2,
+            title: 'ГАРЯЧІ ЗАКУСКИ',
+            description: '',
+            background:  isLocation+'/categories/Sachivi.jpg'
+          },
+          {
+            id: 3,
+            title: 'ПЕРШІ СТРАВИ',
+            description: '',
+            background:  isLocation+'/categories/Harcho.jpg'
+          },
+          {
+            id: 4,
+            title: 'ДРУГІ СТРАВИ',
+            description: '',
+            background:  isLocation+'/categories/Odzuhari.jpg'
+          },
+          {
+            id: 5,
+            title: 'МАНГАЛ',
+            description: '',
+            background:  isLocation+'/categories/Lula.jpg'
+          },
+          {
+            id: 6,
+            title: 'ДЕСЕРТИ',
+            description: '',
+            background:  isLocation+'/categories/IceScream.jpg'
+          },
+          {
+            id: 7,
+            title: 'ДЛЯ ПІКНІКА',
+            description: '',
+            background:  isLocation+'/categories/pickeck.jpg'
+          }
+        ]
+      },
+      statisticBlock: {
+        backgroundVideo: isLocation+'/video/video.webm'
       }
     }
     this.componentScrollFunction = this.componentScrollFunction.bind(this);
@@ -120,7 +179,8 @@ class Erevan extends React.Component{
       <NavigationBarBlock openedMenu={this.state.openedMenu} socials={this.state.socials}/>
       <HeadBlock top={this.state.scrollTop} data={this.state.headBlock} menu={this.state.menu} bigMainLogo={this.state.bigMainLogo} logotype={this.state.logotype}/>
       <AboutBlock data={this.state.aboutBlock} foodIcon={this.state.foodIcon}/>
-      <MenuBlock top={this.state.scrollTop} menuBlockTop={this.state.menuBlockTop}/>
+      <MenuBlock data={this.state.menuBlock} top={this.state.scrollTop} menuBlockTop={this.state.menuBlockTop}/>
+      <StatisticBlock data={this.state.statisticBlock}/>
     </div>
   }
 }
