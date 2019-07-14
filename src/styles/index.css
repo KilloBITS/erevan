@@ -1,0 +1,458 @@
+@font-face {
+  font-family: DefaultText; /* Имя шрифта */
+  src: url(fonts/16857.ttf); /* Путь к файлу со шрифтом */
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: url(../images/background.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  cursor: url(../images/cursor.svg), pointer;
+  font-family: DefaultText;
+}
+
+#root{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow-y: scroll;
+}
+
+.content{
+  width: 100%;
+  height: 100%;
+}
+
+.block{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/** PreloaderBlock **/
+.preloader{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  transition: 0.3s;
+  background-color: white;
+  z-index: 100;
+}
+
+.preloader #Erevan_logo{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 200px;
+}
+
+.preloader .cls-1 {
+  fill: #ffffff;
+}
+
+.preloader.hide{
+  opacity: 0;
+  z-index: -100;
+}
+
+/** Title **/
+.title_block{
+  margin: auto;
+  width: fit-content;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.title_block .thisTitle{
+  text-transform: uppercase;
+  font-size: 40px;
+  letter-spacing: 1px;
+  position: relative;
+  z-index: 1;
+}
+
+.title_block .thisSubTitle{
+  position: absolute;
+  top: calc(50% - 10px);
+  font-size: 80px;
+  font-style: italic;
+  font-weight: bold;
+  white-space: nowrap;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.title_block .titleLine{
+  width: 100%;
+  position: absolute;
+  text-align: center;
+}
+
+.title_block .titleLine::after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  background-color: #1c1c1c;
+  top: 50%;
+  transform: translate(0, -50%);
+  z-index: 0;
+}
+
+.title_block .titleLine svg{
+  width: 30px;
+  position: relative;
+  z-index: 1;
+  background-color: #e9e9e9;
+}
+
+.titleLine .foodIconSvg{
+  fill:red;
+}
+
+/** NavigationBar **/
+
+.bar .openMenuButton{
+  position: fixed;
+  top: 20px;
+  right: 40px;
+  width: 50px;
+  height: 34px;
+  z-index: 11;
+  cursor: pointer;
+}
+
+.bar .openMenuButton .menuButtonLine{
+  width: 100%;
+  height: 5px;
+  background-color: #e9e9e9;
+  position: absolute;
+  transition: 0.3s;
+}
+
+.menuButtonLine.line1{
+  top: 0;
+  left: 0;
+}
+.menuButtonLine.line2{
+  top: 14px;
+  left: -10px;
+  transition: 0.3s;
+}
+.menuButtonLine.line3{
+  top: 28px;
+  left: 0;
+}
+
+.bar .openMenuButton:hover .menuButtonLine.line2{
+  left: 0px;
+}
+
+.openMenuButton.open .line1{
+  transform: rotate(45deg);
+  top: 15px;
+}
+.openMenuButton.open .line2{
+  width: 0;
+}
+.openMenuButton.open .line3{
+  transform: rotate(-45deg);
+  top: 15px;
+}
+
+.bar .socials{
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  font-size: 22px;
+  width: 40px;
+  text-align: center;
+  border-right: 0;
+  cursor: pointer;
+  z-index: 4;
+}
+
+.bar .socials .socialBtn{
+  margin-bottom: 10px;
+}
+
+.bar .socials .socialBtn a{
+  color: rgb(233, 233, 233);
+  font-size: 24px;
+  transition: .3s;
+}
+
+.bar .socials .socialBtn a:hover{
+  color: rgb(188, 56, 56);
+}
+
+/** HeadBlock **/
+.block.head{
+
+}
+
+.head .miniInfoBlock{
+  color: #f3f3f3;
+  position: absolute;
+  max-width: 330px;
+  right: -600px;
+  top: 100px;
+  z-index: 3;
+  transition: 0.3s;
+}
+
+.head .miniInfoBlock.show{
+  right: 100px;
+}
+
+.head .miniInfoBlock .mini_info{
+  display: inline-block;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.head .miniInfoBlock .mini_info .miniInfo_image{
+  float: left;
+  width: 60px;
+  height: 60px;
+  position: relative;
+}
+
+.head .miniInfoBlock .mini_info .miniInfo_image img{
+  width: 100%;
+  max-height: 100%;
+  max-width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.head .miniInfoBlock .mini_info .miniInfo_data{
+  position: relative;
+  float: left;
+  width: calc(100% - 60px);
+}
+
+.head .miniInfoBlock .mini_info .miniInfo_data .miniInfo_title{
+  font-size: 20px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  top: -28px;
+  white-space: nowrap;
+}
+
+.head .miniInfoBlock .mini_info .miniInfo_data .miniInfo_text{
+  padding: 0 10px;
+}
+
+.head .staticMenuHead{
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, 0);
+  text-align: center;
+  padding: 0 50px;
+  width: fit-content;
+  z-index: 3;
+}
+
+.head .staticMenuHead .menu_btn{
+  display: inline-block;
+  color: #e9e9e9;
+  text-transform: uppercase;
+  margin: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.head .staticMenuHead .menu_btn:hover{
+  color: #ffafaf;
+}
+
+.head .background_block{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.background_block .mainLogo{
+  position: absolute;
+  max-width: 600px;
+  width: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  opacity: .7;
+  transition: 1s;
+}
+
+.mainLogo.hide{
+  opacity: 0;
+}
+
+.background_block .mainLogo .cls-1 {
+    fill: #fff7d900;
+    stroke: #f3f3f3;
+    stroke-width: 3px;
+}
+
+.background_block .mainLogo .cls-2 {
+    stroke: #f3f3f3;
+}
+
+.background_block .mainLogo .cls-3 {
+    fill: #ab0f0f;
+}
+
+.head .headerFood.bgImg_1{
+  object-fit: cover;
+  max-width: 600px;
+  position: absolute;
+  left: -600px;
+  bottom: -50px;
+  transition: 0.3s;
+}
+
+.head .headerFood.bgImg_1.show{
+  left: -100px;
+}
+
+.head .headerFood.bgImg_2{
+  object-fit: cover;
+  max-width: 600px;
+  position: absolute;
+  right: -100px;
+  bottom: -100px;
+  transform: rotate(-5deg);
+}
+
+.head .headerFood img{
+  max-width: 100%;
+}
+
+.head .headFoodLink{
+  background-image: url(../images/index-slider-btn.png);
+  position: absolute;
+  left: calc(50% - 50px);
+  top: 0;
+  width: 300px;
+  height: 53px;
+  background-repeat: no-repeat;
+  z-index: -1;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 43px;
+  transform: rotate(-2deg);
+}
+.head .headerFood{
+  max-width: 600px;
+}
+
+.head .blockToScroll{
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMjEuODI1IDIxLjgyNSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMjEuODI1IDIxLjgyNTsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIj48Zz48cGF0aCBzdHlsZT0iZmlsbDojRTlFOUU5IiBkPSJNMTYuNzkxLDEzLjI1NGMwLjQ0NC0wLjQ0NCwxLjE0My0wLjQ0NCwxLjU4NywwYzAuNDI5LDAuNDQ0LDAuNDI5LDEuMTQzLDAsMS41ODdsLTYuNjUsNi42NTEgIGMtMC4yMDYsMC4yMDYtMC40OTIsMC4zMzMtMC44MDksMC4zMzNjLTAuMzE3LDAtMC42MDMtMC4xMjctMC44MS0wLjMzM2wtNi42NS02LjY1MWMtMC40NDQtMC40NDQtMC40NDQtMS4xNDMsMC0xLjU4NyAgczEuMTQzLTAuNDQ0LDEuNTg3LDBsNC43NDYsNC43NjJWMS4xMTFDOS43OTEsMC40OTIsMTAuMjk5LDAsMTAuOTE4LDBjMC42MTksMCwxLjExMSwwLjQ5MiwxLjExMSwxLjExMXYxNi45MDRMMTYuNzkxLDEzLjI1NHoiIGRhdGEtb3JpZ2luYWw9IiMxRTIwMUQiIGNsYXNzPSJhY3RpdmUtcGF0aCIgZGF0YS1vbGRfY29sb3I9IiMxRTIwMUQiPjwvcGF0aD48L2c+IDwvc3ZnPg==);
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  width: 30px;
+  height: 30px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transform: translate(-50%, 0);
+}
+
+.head .blockToScroll::after{
+  content: '';
+}
+
+.head .bottomBorder{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  top: 0;
+  left: 0;
+}
+
+.head .bottomBorder svg{
+  width: 100%;
+  transform: scaleX(1) scaleY(0);
+  transform-origin: bottom;
+  vertical-align: bottom;
+  transition: transform 1s cubic-bezier(.01,.32,.11,.99);
+  will-change: transform;
+  fill: #08e8de;
+  position: absolute;
+  bottom: -1px;
+}
+
+.head .bottomBorder.isScrolled svg{
+  transform: scaleX(1) scaleY(1);
+}
+
+/** AboutBlock **/
+.block.about{
+  background-color: #e9e9e9;
+}
+
+.about .slogan{
+  text-align: center;
+  margin: 20px auto;
+  font-size: 22px;
+  width: fit-content;
+}
+
+.about .aboutContentBlock{
+  width: 800px;
+  padding: 30px;
+  margin: auto;
+  font-size: 20px;
+  text-align: center;
+}
+
+/** MenuBlock **/
+.block.menu{
+
+}
+
+.menu .topBorder{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  top: 0;
+  left: 0;
+}
+
+.menu .topBorder svg{
+  width: 100%;
+  transform: scaleX(1) scaleY(0);
+  transform-origin: bottom;
+  vertical-align: bottom;
+  transition: transform 1s cubic-bezier(.01,.32,.11,.99);
+  will-change: transform;
+  fill: #08e8de;
+  position: absolute;
+  top: -9vw;
+}
+
+.menu .topBorder.isScrolled svg{
+  transform: scaleX(1) scaleY(-1);
+}
