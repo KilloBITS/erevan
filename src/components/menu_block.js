@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 let parseMenuBlocs = (arr) => {
   const menu = arr.map((a, key) => <div key={key} className="toZoomImageBlock menuCategoryBlock">
+    <div className="foodLength">{a.description}</div>
     <div className="backgroundFitBlock">
       <img src={a.background} alt={a.title} className="backgroundFoodsImage"/>
     </div>

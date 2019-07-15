@@ -29,7 +29,7 @@ library.add(fab, faCheckSquare, faCoffee, fas);
 
 class Erevan extends React.Component{
   constructor(props){
-    const isLocation = (window.location.hostname === 'localhost')? window.location.origin.split('3000')[0]+'5003':window.location.origin;
+    const isLocation = (window.location.hostname === 'localhost')? (window.location.port === "3000")? window.location.origin.split('3000')[0]+'5003':window.location.origin:window.location.origin;
     super(props)
     this.state = {
       preloader: true,
@@ -124,49 +124,49 @@ class Erevan extends React.Component{
           {
             id: 0,
             title: 'ХОЛОДНІ ЗАКУСКИ',
-            description: '',
+            description: '3',
             background:  isLocation+'/categories/Salo.jpg'
           },
           {
             id: 1,
             title: 'CАЛАТИ',
-            description: '',
+            description: '4',
             background:  isLocation+'/categories/Chahtoni.jpg'
           },
           {
             id: 2,
             title: 'ГАРЯЧІ ЗАКУСКИ',
-            description: '',
+            description: '5',
             background:  isLocation+'/categories/Sachivi.jpg'
           },
           {
             id: 3,
             title: 'ПЕРШІ СТРАВИ',
-            description: '',
+            description: '4',
             background:  isLocation+'/categories/Harcho.jpg'
           },
           {
             id: 4,
             title: 'ДРУГІ СТРАВИ',
-            description: '',
+            description: '6',
             background:  isLocation+'/categories/Odzuhari.jpg'
           },
           {
             id: 5,
             title: 'МАНГАЛ',
-            description: '',
+            description: '4',
             background:  isLocation+'/categories/Lula.jpg'
           },
           {
             id: 6,
             title: 'ДЕСЕРТИ',
-            description: '',
+            description: '3',
             background:  isLocation+'/categories/IceScream.jpg'
           },
           {
             id: 7,
             title: 'ДЛЯ ПІКНІКА',
-            description: '',
+            description: '3',
             background:  isLocation+'/categories/pickeck.jpg'
           }
         ]
@@ -212,7 +212,11 @@ class Erevan extends React.Component{
         ]
       },
       statisticBlock: {
-        backgroundVideo: isLocation+'/video/video.webm'
+        backgroundVideo: isLocation+'/video/video.webm',
+        icon1: isLocation+'/icons/dish.svg',
+        icon2: isLocation+'/icons/heart-sketch.svg',
+        icon3: isLocation+'/icons/banquet-table.svg',
+        icon4: isLocation+'/icons/waiter.svg'
       }
     }
     this.componentScrollFunction = this.componentScrollFunction.bind(this);

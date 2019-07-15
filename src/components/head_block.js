@@ -59,9 +59,7 @@ class HeadBlock extends React.Component {
             }}
           />
         </div>
-        <div className={(this.props.bigMainLogo)?"miniInfoBlock show":"miniInfoBlock"}>
-          {parseMiniInfo(this.props.data.miniInfo)}
-        </div>
+        
         <div className={(this.props.bigMainLogo)?"headerFood bgImg_1 show":"headerFood bgImg_1"}>
           <img src={this.props.data.background_1} alt="Єреван"/>
           <div className="headFoodLink">Оджахурі на кеци</div>
