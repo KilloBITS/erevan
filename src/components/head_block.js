@@ -41,7 +41,11 @@ class HeadBlock extends React.Component {
 
   render() {
     return <div className="block head" id="HeadBlock">
-      <div className="staticMenuHead">{parseMenu(this.props.menu, true)}</div>
+      <div className="staticMenuHead">
+        <div className="staticMenuHeadeBoard smhLeft"></div>
+        {parseMenu(this.props.menu, true)}
+        <div className="staticMenuHeadeBoard smhRight"></div>
+      </div>
       <div className="background_block">
         <div className={(this.props.bigMainLogo)?"mainLogo":"mainLogo hide"}>
           <ReactVivus

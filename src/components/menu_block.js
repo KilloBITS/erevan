@@ -22,7 +22,7 @@ class MenuBlock extends React.Component {
           C980.9,160.6,956.5-85.5,293.5,78z"/>
         </svg>
       </div>
-      <Title foodIcon={this.props.foodIcon} title={this.props.data.title} subtitle={this.props.data.subTitle} color="#e9e9e9" subcolor="rgba(232, 232, 232, 0.1)"/>
+      <Title title={this.props.data.title} subtitle={this.props.data.subTitle} color="#e9e9e9" subcolor="rgba(232, 232, 232, 0.1)"/>
       <div className="slogan">
         {this.props.data.slogan}
       </div>

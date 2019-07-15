@@ -20,7 +20,10 @@ import HeadBlock from './components/head_block.js';
 import AboutBlock from './components/about_block.js';
 import MenuBlock from './components/menu_block.js';
 import StatisticBlock from './components/statistic_block.js';
-
+import NewsBlock from './components/news_block.js';
+import GalleryBlock from './components/gallery_block.js';
+import BookNowBlock from './components/booknow_block.js';
+import StaffBlock from './components/staff_block.js'
 import FooterBlock from './components/footer_block.js'
 library.add(fab, faCheckSquare, faCoffee, fas);
 
@@ -114,8 +117,8 @@ class Erevan extends React.Component{
         ]
       },
       menuBlock: {
-        title:'< Наше меню >',
-        subTitle:'наше меню',
+        title:'< МЕНЮ ЗАКЛАДУ >',
+        subTitle:'МЕНЮ ЗАКЛАДУ',
         slogan: 'Відчуй на смак традиції Вірменії у серці Львова',
         foodsCategory: [
           {
@@ -168,6 +171,46 @@ class Erevan extends React.Component{
           }
         ]
       },
+      newsBlock: {
+        title:'< ЩО НОВОГО? >',
+        subTitle:'ЩО НОВОГО?',
+        slogan: 'Новини ресторану "Єреван" у Львові'
+      },
+      galleryBlock: {
+        title:'< Фотогалерея >',
+        subTitle:'Фотогалерея',
+        slogan: 'Затишок та комфорт і справжня атмосфера Вірменії у ресторані "Єреван" у Львові'
+      },
+      bookNowBlock: {
+        title:'< БРОНЮВАННЯ СТОЛИКА ЧИ БЕНКЕТА >',
+        subTitle:'БРОНЮВАННЯ СТОЛИКА ЧИ БЕНКЕТА',
+        slogan: 'Швидше забронюй столик'
+      },
+      staffBlock: {
+        title:'< Наш персонал >',
+        subTitle:'Наш персонал',
+        slogan: 'Люди що дбають про вас',
+        personal: [
+          {
+            name: 'Игорь',
+            title: '',
+            position: 'Шеф-повар',
+            photo: isLocation+'/staff/team1.png'
+          },
+          {
+            name: 'Валерий',
+            title: '',
+            position: 'Повар-кондитер',
+            photo: isLocation+'/staff/team2.png'
+          },
+          {
+            name: 'Кристина',
+            title: '',
+            position: 'Менеджер',
+            photo: isLocation+'/staff/team3.png'
+          }
+        ]
+      },
       statisticBlock: {
         backgroundVideo: isLocation+'/video/video.webm'
       }
@@ -202,6 +245,10 @@ class Erevan extends React.Component{
       <AboutBlock data={this.state.aboutBlock} socials={this.state.socials}/>
       <MenuBlock data={this.state.menuBlock} top={this.state.scrollTop} menuBlockTop={this.state.menuBlockTop}/>
       <StatisticBlock data={this.state.statisticBlock}/>
+      <NewsBlock data={this.state.newsBlock}/>
+      <GalleryBlock data={this.state.galleryBlock}/>
+      <BookNowBlock data={this.state.bookNowBlock}/>
+      <StaffBlock data={this.state.staffBlock}/>
       <FooterBlock/>
     </div>
   }
