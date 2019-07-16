@@ -499,6 +499,41 @@ body{
   max-width: 600px;
 }
 
+.head .headerDinnerItem{
+  position: absolute;
+  right: -100px;
+  bottom: -100px;
+}
+
+.head .headerDinnerItem.show{
+
+}
+
+.head .headerDinnerItem img{
+  position: absolute;
+  max-width: 600px;
+  width: 400px;
+  right: -300px;
+  bottom: -300px;
+  z-index: 1;
+  height: 440px;
+  transform: rotate(-80deg);
+}
+
+.head .headerDinnerItem.show img{
+  right: 0px;
+  bottom: 0px;
+}
+
+#forkImage{
+  transform: rotate(-55deg);
+  transition: 0.3s;
+}
+
+#knifeImage{
+  transition: 0.5s;
+}
+
 .head .blockToScroll{
   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMjEuODI1IDIxLjgyNSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMjEuODI1IDIxLjgyNTsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIj48Zz48cGF0aCBzdHlsZT0iZmlsbDojRTlFOUU5IiBkPSJNMTYuNzkxLDEzLjI1NGMwLjQ0NC0wLjQ0NCwxLjE0My0wLjQ0NCwxLjU4NywwYzAuNDI5LDAuNDQ0LDAuNDI5LDEuMTQzLDAsMS41ODdsLTYuNjUsNi42NTEgIGMtMC4yMDYsMC4yMDYtMC40OTIsMC4zMzMtMC44MDksMC4zMzNjLTAuMzE3LDAtMC42MDMtMC4xMjctMC44MS0wLjMzM2wtNi42NS02LjY1MWMtMC40NDQtMC40NDQtMC40NDQtMS4xNDMsMC0xLjU4NyAgczEuMTQzLTAuNDQ0LDEuNTg3LDBsNC43NDYsNC43NjJWMS4xMTFDOS43OTEsMC40OTIsMTAuMjk5LDAsMTAuOTE4LDBjMC42MTksMCwxLjExMSwwLjQ5MiwxLjExMSwxLjExMXYxNi45MDRMMTYuNzkxLDEzLjI1NHoiIGRhdGEtb3JpZ2luYWw9IiMxRTIwMUQiIGNsYXNzPSJhY3RpdmUtcGF0aCIgZGF0YS1vbGRfY29sb3I9IiMxRTIwMUQiPjwvcGF0aD48L2c+IDwvc3ZnPg==);
   position: absolute;
@@ -823,8 +858,58 @@ body{
 
 }
 
+.news .slogan{
+  text-align: center;
+  margin: 20px auto;
+  font-size: 22px;
+  width: fit-content;
+  color: #e9e9e9;
+}
+
 .news .title_block{
   margin-top: 50px;
+}
+
+.newsthisBlock{
+  color: #1a1a1a;
+  display: inline-block;
+  height: 400px;
+  float: left;
+  background-color: #e9e9e9;
+}
+
+/** GalleryBlock **/
+.block.gallery{
+  overflow: hidden;
+  height: auto;
+  /* padding-bottom: 50px; */
+  max-height: 845px;
+}
+
+.gallery .slogan{
+  text-align: center;
+  margin: 20px auto;
+  font-size: 22px;
+  width: fit-content;
+  color: #e9e9e9;
+}
+
+.galleryFooter{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(0deg, #1b1b1b, 76%, #0a0a0a00);
+  height: 80px;
+}
+
+.gallery .defaultButton{
+  margin: auto;
+}
+
+/** BookNowBlock **/
+.block.booknow{
+  padding-top: 50px;
 }
 
 /** StaffBlock **/

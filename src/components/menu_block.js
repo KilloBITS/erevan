@@ -1,6 +1,5 @@
 import React from 'react';
 import Title from './includes/title.js';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 let parseMenuBlocs = (arr) => {
   const menu = arr.map((a, key) => <div key={key} className="toZoomImageBlock menuCategoryBlock">

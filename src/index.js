@@ -4,10 +4,10 @@ import Pace from 'react-pace-progress'
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
-import { far } from '@fortawesome/free-regular-svg-icons';
 import { faCheckSquare, faCoffee , fas} from '@fortawesome/free-solid-svg-icons';
 
 //Styles
+import './styles/swiper.css';
 import './styles/index.css';
 import './styles/index.min.css';
 import logotype from './images/logotype.svg';
@@ -88,7 +88,9 @@ class Erevan extends React.Component{
           }
         ],
         background_1: isLocation+'/bg_el_1.svg',
-        background_2: isLocation+'/bg_el_2.png'
+        background_2: isLocation+'/bg_el_2.png',
+        fork: isLocation + '/fork.svg',
+        knife: isLocation + '/knife.svg'
       },
       aboutBlock: {
         title:`< ПРО НАС >`,
@@ -174,12 +176,266 @@ class Erevan extends React.Component{
       newsBlock: {
         title:'< ЩО НОВОГО? >',
         subTitle:'ЩО НОВОГО?',
-        slogan: 'Новини ресторану "Єреван" у Львові'
+        slogan: 'Новини ресторану "Єреван" у Львові',
+        newsArray: [
+          {
+            id: 0,
+            title:'',
+            dataType: '',
+            dataUrl: '',
+            text:'',
+            date:'',
+          },
+          {
+            id: 1,
+            title:'',
+            dataType: '',
+            dataUrl: '',
+            text:'',
+            date:'',
+          },
+          {
+            id: 2,
+            title:'',
+            dataType: '',
+            dataUrl: '',
+            text:'',
+            date:'',
+          },
+          {
+            id: 3,
+            title:'',
+            dataType: '',
+            dataUrl: '',
+            text:'',
+            date:'',
+          },
+          {
+            id: 4,
+            title:'',
+            dataType: '',
+            dataUrl: '',
+            text:'',
+            date:'',
+          },
+          {
+            id: 5,
+            title:'',
+            dataType: '',
+            dataUrl: '',
+            text:'',
+            date:'',
+          },
+          {
+            id: 6,
+            title:'',
+            dataType: '',
+            dataUrl: '',
+            text:'',
+            date:'',
+          },
+          {
+            id: 7,
+            title:'',
+            dataType: '',
+            dataUrl: '',
+            text:'',
+            date:'',
+          },
+          {
+            id: 8,
+            title:'',
+            dataType: '',
+            dataUrl: '',
+            text:'',
+            date:'',
+          },
+          {
+            id: 9,
+            title:'',
+            dataType: '',
+            dataUrl: '',
+            text:'',
+            date:'',
+          }
+        ]
       },
       galleryBlock: {
         title:'< Фотогалерея >',
         subTitle:'Фотогалерея',
-        slogan: 'Затишок та комфорт і справжня атмосфера Вірменії у ресторані "Єреван" у Львові'
+        slogan: 'Затишок та комфорт і справжня атмосфера Вірменії у ресторані "Єреван" у Львові',
+        images: [
+          {
+                  src: isLocation+"/gallery/1.jpg",
+                  thumbnail: isLocation+"/gallery/1.jpg",
+                  thumbnailWidth: 320,
+                  thumbnailHeight: 212,
+                  caption: "Булочка"
+          },
+          {
+                  src: isLocation+"/gallery/2.jpg",
+                  thumbnail: isLocation+"/gallery/2.jpg",
+                  thumbnailWidth: 320,
+                  thumbnailHeight: 212,
+                  caption: "Булочка"
+          },{
+                  src: isLocation+"/gallery/3.jpg",
+                  thumbnail: isLocation+"/gallery/3.jpg",
+                  thumbnailWidth: 320,
+                  thumbnailHeight: 212,
+                  caption: "Булочка"
+          },{
+                  src: isLocation+"/gallery/4.jpg",
+                  thumbnail: isLocation+"/gallery/4.jpg",
+                  thumbnailWidth: 320,
+                  thumbnailHeight: 212,
+                  caption: "Булочка"
+          },{
+                  src: isLocation+"/gallery/5.jpg",
+                  thumbnail: isLocation+"/gallery/5.jpg",
+                  thumbnailWidth: 320,
+                  thumbnailHeight: 212,
+                  caption: "Булочка"
+          },{
+                  src: isLocation+"/gallery/6.jpg",
+                  thumbnail: isLocation+"/gallery/6.jpg",
+                  thumbnailWidth: 320,
+                  thumbnailHeight: 212,
+                  caption: "Булочка"
+          },{
+                  src: isLocation+"/gallery/7.jpg",
+                  thumbnail: isLocation+"/gallery/7.jpg",
+                  thumbnailWidth: 320,
+                  thumbnailHeight: 212,
+                  caption: "Булочка"
+          },{
+                  src: isLocation+"/gallery/7.jpg",
+                  thumbnail: isLocation+"/gallery/7.jpg",
+                  thumbnailWidth: 320,
+                  thumbnailHeight: 212,
+                  caption: "Булочка"
+          },{
+                  src: isLocation+"/gallery/8.jpg",
+                  thumbnail: isLocation+"/gallery/8.jpg",
+                  thumbnailWidth: 320,
+                  thumbnailHeight: 212,
+                  caption: "Булочка"
+          },{
+                  src: isLocation+"/gallery/9.jpg",
+                  thumbnail: isLocation+"/gallery/9.jpg",
+                  thumbnailWidth: 320,
+                  thumbnailHeight: 212,
+                  caption: "Булочка"
+          },{
+                  src: isLocation+"/gallery/10.jpg",
+                  thumbnail: isLocation+"/gallery/10.jpg",
+                  thumbnailWidth: 320,
+                  thumbnailHeight: 212,
+                  caption: "Булочка"
+          },{
+                  src: isLocation+"/gallery/11.jpg",
+                  thumbnail: isLocation+"/gallery/11.jpg",
+                  thumbnailWidth: 320,
+                  thumbnailHeight: 212,
+                  caption: "Булочка"
+          },{
+                  src: isLocation+"/gallery/12.jpg",
+                  thumbnail: isLocation+"/gallery/12.jpg",
+                  thumbnailWidth: 320,
+                  thumbnailHeight: 212,
+                  caption: "Булочка"
+          },{
+                  src: isLocation+"/gallery/13.jpg",
+                  thumbnail: isLocation+"/gallery/13.jpg",
+                  thumbnailWidth: 320,
+                  thumbnailHeight: 212,
+                  caption: "Булочка"
+          },{
+                  src: isLocation+"/gallery/14.jpg",
+                  thumbnail: isLocation+"/gallery/14.jpg",
+                  thumbnailWidth: 320,
+                  thumbnailHeight: 212,
+                  caption: "Булочка"
+          },{
+                  src: isLocation+"/gallery/15.jpg",
+                  thumbnail: isLocation+"/gallery/15.jpg",
+                  thumbnailWidth: 320,
+                  thumbnailHeight: 212,
+                  caption: "Булочка"
+          },{
+                  src: isLocation+"/gallery/16.jpg",
+                  thumbnail: isLocation+"/gallery/16.jpg",
+                  thumbnailWidth: 320,
+                  thumbnailHeight: 212,
+                  caption: "Булочка"
+          },{
+                  src: isLocation+"/gallery/17.jpg",
+                  thumbnail: isLocation+"/gallery/17.jpg",
+                  thumbnailWidth: 320,
+                  thumbnailHeight: 212,
+                  caption: "Булочка"
+          },{
+                  src: isLocation+"/gallery/18.jpg",
+                  thumbnail: isLocation+"/gallery/18.jpg",
+                  thumbnailWidth: 320,
+                  thumbnailHeight: 212,
+                  caption: "Булочка"
+          },{
+                  src: isLocation+"/gallery/19.jpg",
+                  thumbnail: isLocation+"/gallery/19.jpg",
+                  thumbnailWidth: 320,
+                  thumbnailHeight: 212,
+                  caption: "Булочка"
+          },{
+                  src: isLocation+"/gallery/20.jpg",
+                  thumbnail: isLocation+"/gallery/20.jpg",
+                  thumbnailWidth: 320,
+                  thumbnailHeight: 212,
+                  caption: "Булочка"
+          },{
+                  src: isLocation+"/gallery/21.jpg",
+                  thumbnail: isLocation+"/gallery/21.jpg",
+                  thumbnailWidth: 320,
+                  thumbnailHeight: 212,
+                  caption: "Булочка"
+          },{
+                  src: isLocation+"/gallery/22.jpg",
+                  thumbnail: isLocation+"/gallery/22.jpg",
+                  thumbnailWidth: 320,
+                  thumbnailHeight: 212,
+                  caption: "Булочка"
+          },{
+                  src: isLocation+"/gallery/23.jpg",
+                  thumbnail: isLocation+"/gallery/23.jpg",
+                  thumbnailWidth: 320,
+                  thumbnailHeight: 212,
+                  caption: "Булочка"
+          },{
+                  src: isLocation+"/gallery/24.jpg",
+                  thumbnail: isLocation+"/gallery/24.jpg",
+                  thumbnailWidth: 320,
+                  thumbnailHeight: 212,
+                  caption: "Булочка"
+          },{
+                  src: isLocation+"/gallery/25.jpg",
+                  thumbnail: isLocation+"/gallery/25.jpg",
+                  thumbnailWidth: 320,
+                  thumbnailHeight: 212,
+                  caption: "Булочка"
+          },{
+                  src: isLocation+"/gallery/26.jpg",
+                  thumbnail: isLocation+"/gallery/26.jpg",
+                  thumbnailWidth: 320,
+                  thumbnailHeight: 212,
+                  caption: "Булочка"
+          },{
+                  src: isLocation+"/gallery/27.jpg",
+                  thumbnail: isLocation+"/gallery/27.jpg",
+                  thumbnailWidth: 320,
+                  thumbnailHeight: 212,
+                  caption: "Булочка"
+          }
+        ]
       },
       bookNowBlock: {
         title:'< БРОНЮВАННЯ СТОЛИКА ЧИ БЕНКЕТА >',
@@ -248,7 +504,7 @@ class Erevan extends React.Component{
       <HeadBlock top={this.state.scrollTop} data={this.state.headBlock} menu={this.state.menu} bigMainLogo={this.state.bigMainLogo} logotype={this.state.logotype}/>
       <AboutBlock data={this.state.aboutBlock} socials={this.state.socials}/>
       <MenuBlock data={this.state.menuBlock} top={this.state.scrollTop} menuBlockTop={this.state.menuBlockTop}/>
-      <StatisticBlock data={this.state.statisticBlock}/>
+      <StatisticBlock data={this.state.statisticBlock} top={this.state.scrollTop}/>
       <NewsBlock data={this.state.newsBlock}/>
       <GalleryBlock data={this.state.galleryBlock}/>
       <BookNowBlock data={this.state.bookNowBlock}/>

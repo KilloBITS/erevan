@@ -1,6 +1,5 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Title from './includes/title.js';
+import Length from './includes/length.js';
 
 class StatisticBlock extends React.Component {
   render() {
@@ -19,7 +18,9 @@ class StatisticBlock extends React.Component {
             </div>
             <div className="statisticTitle">Різноманітних</div>
             <div className="statisticTitle2">страв у меню</div>
-            <div className="statisticLength">200+</div>
+            <div className="statisticLength">
+              <Length number={130} speed={27} symbol="+" id="num0" top={this.props.top}/>
+            </div>
           </div>
 
           <div className="statisticBlockData">
@@ -28,7 +29,9 @@ class StatisticBlock extends React.Component {
             </div>
             <div className="statisticTitle">Щасливих клієнтів</div>
             <div className="statisticTitle2">Що відвідують нас кожен день</div>
-            <div className="statisticLength">170+</div>
+            <div className="statisticLength">
+              <Length number={170} speed={20} symbol="+" id="num1" top={this.props.top}/>
+            </div>
           </div>
 
           <div className="statisticBlockData">
@@ -37,7 +40,9 @@ class StatisticBlock extends React.Component {
             </div>
             <div className="statisticTitle">Замовлень</div>
             <div className="statisticTitle2">банкетів та свят</div>
-            <div className="statisticLength">100+</div>
+            <div className="statisticLength">
+              <Length number={100} speed={30} symbol="+" id="num2" top={this.props.top}/>
+            </div>
           </div>
 
           <div className="statisticBlockData">
@@ -46,7 +51,9 @@ class StatisticBlock extends React.Component {
             </div>
             <div className="statisticTitle">Працівників</div>
             <div className="statisticTitle2">Що дбають про вас</div>
-            <div className="statisticLength">30+</div>
+            <div className="statisticLength">
+              <Length number={30} speed={100} symbol="+" id="num3" top={this.props.top}/>
+            </div>
           </div>
         </div>
       </div>

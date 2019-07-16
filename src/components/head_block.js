@@ -1,8 +1,5 @@
 import React from 'react';
-import Parallax from 'parallax-js';
 import ReactVivus from 'react-vivus';
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 let toTopThisScroll = (e) => {
   let toTopposition = document.getElementById(e.target.getAttribute('toelement')).offsetTop;
@@ -16,19 +13,6 @@ let parseMenu = (dataMenu, m) => {
   }else{
     return <div className="menu_btn">Not data found</div>
   }
-}
-
-let parseMiniInfo = (arr) => {
-  const menuBtn = arr.map((a, key) => <div key={key} className="mini_info">
-    <div className="miniInfo_image">
-      <img src={a.icon} alt=""/>
-    </div>
-    <div className="miniInfo_data">
-      <div className="miniInfo_title">{a.title}</div>
-      <div className="miniInfo_text">{a.text}</div>
-    </div>
-  </div>);
-  return menuBtn
 }
 
 class HeadBlock extends React.Component {
@@ -59,10 +43,15 @@ class HeadBlock extends React.Component {
             }}
           />
         </div>
-        
+
         <div className={(this.props.bigMainLogo)?"headerFood bgImg_1 show":"headerFood bgImg_1"}>
           <img src={this.props.data.background_1} alt="Єреван"/>
           <div className="headFoodLink">Оджахурі на кеци</div>
+        </div>
+
+        <div className={(this.props.bigMainLogo)?"headerDinnerItem show":"headerDinnerItem"}>
+          <img src={this.props.data.fork} alt="fork" id="forkImage"/>
+          <img src={this.props.data.knife} alt="knife" id="knifeImage"/>
         </div>
       </div>
       <div className="blockToScroll"></div>
