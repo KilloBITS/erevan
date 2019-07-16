@@ -25,9 +25,15 @@ class MenuBlock extends React.Component {
       openfullMenu: true
     });
   }
+
+  closeFullMenuBlock(){
+    this.setState({
+      openfullMenu: false
+    })
+  }
   render() {
     return <div className="block menu" id="MenuBlock">
-      <FullMenu open={this.state.openfullMenu} menuimages={this.props.data.menuimages}/>
+      <FullMenu open={this.state.openfullMenu} menuimages={this.props.data.menuimages} closemenu={this.closeFullMenuBlock.bind(this)}/>
       <div className={(this.props.top >= this.props.menuBlockTop)?"topBorder isScrolled":"topBorder"}>
         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
            viewBox="0 0 1440 129" style={{enableBackground:"new 0 0 1440 129"}}>

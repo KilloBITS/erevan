@@ -52,6 +52,7 @@ class Turn extends React.Component {
 const options = {
   width: 1100,
   height: 800,
+  page: 2,
   autoCenter: false,
   display: "double",
   acceleration: true,
@@ -76,6 +77,7 @@ class FullMenu extends React.Component {
       <div className={(this.props.open)?"menuBook show":"menuBook"}>
       <div className="nextPrewBtnfromMenu nextMenuBtn" onClick={this.menuNextPage.bind(this)}></div>
       <div className="nextPrewBtnfromMenu prewMenuBtn" onClick={this.menuPrewPage.bind(this)}></div>
+      <div className="closeBigMenuBtn" onClick={this.props.closemenu}>Закрити</div>
       <Turn options={options} className="magazine">
         {this.props.menuimages.map((page, index) => (
           <div key={index} className="page">
