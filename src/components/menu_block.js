@@ -1,6 +1,6 @@
 import React from 'react';
 import Title from './includes/title.js';
-
+import FullMenu from './includes/full_menu.js';
 let parseMenuBlocs = (arr) => {
   const menu = arr.map((a, key) => <div key={key} className="toZoomImageBlock menuCategoryBlock">
     <div className="foodLength">{a.description}</div>
@@ -13,8 +13,21 @@ let parseMenuBlocs = (arr) => {
 }
 
 class MenuBlock extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      openfullMenu: false
+    }
+  }
+
+  openFullMenuBlock(){
+    this.setState({
+      openfullMenu: true
+    });
+  }
   render() {
     return <div className="block menu" id="MenuBlock">
+      <FullMenu open={this.state.openfullMenu} menuimages={this.props.data.menuimages}/>
       <div className={(this.props.top >= this.props.menuBlockTop)?"topBorder isScrolled":"topBorder"}>
         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
            viewBox="0 0 1440 129" style={{enableBackground:"new 0 0 1440 129"}}>
@@ -29,7 +42,7 @@ class MenuBlock extends React.Component {
       <div className="menuContentBlock">
         {parseMenuBlocs(this.props.data.foodsCategory)}
       </div>
-      <div className="defaultButton">
+      <div className="defaultButton" onClick={this.openFullMenuBlock.bind(this)}>
         Переглянути повне меню
       </div>
     </div>

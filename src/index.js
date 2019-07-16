@@ -171,6 +171,19 @@ class Erevan extends React.Component{
             description: '3',
             background:  isLocation+'/categories/pickeck.jpg'
           }
+        ],
+        menuimages:[
+          isLocation+'/menu/0.jpg',
+          isLocation+'/menu/1.jpg',
+          isLocation+'/menu/2.jpg',
+          isLocation+'/menu/3.jpg',
+          isLocation+'/menu/4.jpg',
+          isLocation+'/menu/5.jpg',
+          isLocation+'/menu/6.jpg',
+          isLocation+'/menu/7.jpg',
+          isLocation+'/menu/8.jpg',
+          isLocation+'/menu/9.jpg',
+          isLocation+'/menu/10.jpg'
         ]
       },
       newsBlock: {

@@ -15,7 +15,7 @@ class GalleryBlock extends React.Component {
         imageCountSeparator="/"
       />
       <div className="galleryFooter">
-        <div class="defaultButton">Більше фотографій</div>
+        <div className="defaultButton">Більше фотографій</div>
       </div>
     </div>
   }
