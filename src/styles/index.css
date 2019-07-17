@@ -1074,6 +1074,47 @@ body{
   background-color: #e9e9e9;
 }
 
+.newsData{
+  width: 100%;
+  height: 190px;
+  overflow: hidden;
+}
+
+.newsData img{
+  min-height: 100%;
+  width: 100%;
+}
+
+.newsData video{
+
+}
+
+.newsTitle{
+  font-weight: bold;
+  width: calc(100% - 30px);
+  text-align: center;
+  text-transform: uppercase;
+  margin: auto;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #191919;
+  margin-top: 10px;
+}
+
+.newsText{
+  width: calc(100% - 30px);
+  text-align: center;
+  margin: auto;
+}
+
+.newsDate{
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
 /** GalleryBlock **/
 .block.gallery{
   overflow: hidden;

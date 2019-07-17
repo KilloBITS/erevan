@@ -5,10 +5,18 @@ import Title from './includes/title.js';
 
 let parseNews = (data) => {
   const dataBlock = data.map((comp, key) => <div key={key} className="newsthisBlock">
-    <div className="newsImage"></div>
-    <div className="newsTitle"></div>
-    <div className="newsText"></div>
-    <div className="newsDate"></div>
+    <div className="newsData">
+      {(comp.dataType === 'image')?<img src={comp.dataUrl} alt=""/>:null}
+    </div>
+    <div className="newsTitle">
+      {comp.title}
+    </div>
+    <div className="newsText">
+      {comp.text}
+    </div>
+    <div className="newsDate">
+      {comp.date}
+    </div>
   </div>);
   return dataBlock
 }
