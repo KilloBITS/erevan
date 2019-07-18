@@ -1161,6 +1161,49 @@ body{
   max-width: 1080px;
   margin: auto;
   max-height: 600px;
+  border: 3px solid #f3f3f3;
+  border-radius: 0px;
+  overflow: hidden;
+  box-shadow: 0px 0px 0px 6px #1b1b1b, 0px 0px 0px 7px white;
+  position: relative;
+}
+
+.mapStaticData{
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  width: calc(40% - 20px);
+  background-color: rgb(233, 233, 233);
+  z-index: 999;
+  box-shadow: 1px 0px 3px 0px rgba(0, 0, 0, 0.18);
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.mapContent .leaflet-control-container{
+  display: none;
+}
+
+.mapStaticData_line{
+  width: calc(100% - 20px);
+  display: inline-block;
+  padding: 5px 10px;
+  text-transform: uppercase;
+}
+
+.mapStaticData_line div{
+  display: inline-block;
+  padding: 0 4px;
+
+}
+
+.mapStaticData_title{
+  display: inline-block;
+  padding: 0 4px;
+}
+
+.mapStaticData_name{
+
 }
 
 .mapContent #map{
@@ -1237,6 +1280,107 @@ body{
 }
 
 
+/** FullNavigation **/
+.full_nav{
+  position: fixed;
+  z-index: -1;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+}
+
+.full_nav.open{
+  z-index: 10;
+  opacity: 1;
+  transition: 0.3s;
+  background-image: url(../images/background.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.fullNavBackBlock{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.full_nav .fullNavBackBlock::before,
+.full_nav .fullNavBackBlock::after{
+  content: '';
+  background-image: url(../images/background.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  transition: 0.3s;
+}
+
+.fullNavBackBlock::before{
+  top: 0;
+  right: 100%;
+}
+
+.fullNavBackBlock::after{
+  bottom: 0;
+  left: 100%;
+}
+
+.full_nav.open .fullNavBackBlock::before{
+  top: 0;
+  right: 0%;
+  background-image: none;
+}
+
+
+.full_nav.open .fullNavBackBlock::after{
+  bottom: 0;
+  left: 0%;
+  background-image: none;
+}
+
+.fullNavContentBlock{
+  position: absolute;
+  left: 30%;
+  top: 100%;
+  transition: 0.5s;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 30px;
+  opacity: 0;
+  padding: 20px 50px;
+  border: 1px solid #1d1d1d;
+  border-radius: 0px;
+  overflow: hidden;
+}
+
+.full_nav.open .fullNavContentBlock{
+  top: 50%;
+  opacity: 1;
+  color: white;
+}
+
+.fullNavMenuBtn{
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-family: Amaticscbold;
+  font-size: 60px;
+  transition: 0.3s;
+  color: white;
+}
+
+.fullNavMenuBtn:hover{
+  padding-left: 15px;
+}
+
+.fullNavSocials{
+  
+}
 
 /** FooterBlock **/
 .block.footer{

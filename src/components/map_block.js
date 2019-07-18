@@ -17,7 +17,7 @@ var meIcon = L.divIcon({
 
 const position = [49.836820,24.010683]
 const map = (
-  <Map center={position}  scrollWheelZoom={false} zoom={18} id="map">
+  <Map center={[49.836820,24.009683]}  scrollWheelZoom={false} zoom={18} id="map">
     <TileLayer url="http://mt1.google.com/vt/lyrs=r&x={x}&y={y}&z={z}"/>
     <Marker position={position} icon={meIcon} ></Marker>
   </Map>
@@ -34,6 +34,29 @@ class MapBlock extends React.Component {
         {this.props.data.slogan}
       </div>
       <div className="mapContent">
+        <div className="mapStaticData">
+
+          <div className="mapStaticData_line">
+            <div className="mapStaticData_title">КраЇна:</div>
+            <div className="mapStaticData_name">Україна</div>
+          </div>
+
+          <div className="mapStaticData_line">
+            <div className="mapStaticData_title">Місто:</div>
+            <div className="mapStaticData_name">Львів</div>
+          </div>
+
+          <div className="mapStaticData_line">
+            <div className="mapStaticData_title">Вулиця:</div>
+            <div className="mapStaticData_name">Митрополита Андрея</div>
+          </div>
+
+          <div className="mapStaticData_line">
+            <div className="mapStaticData_title">Будинок:</div>
+            <div className="mapStaticData_name">8</div>
+          </div>
+
+        </div>
         {map}
       </div>
     </div>

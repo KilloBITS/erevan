@@ -8,7 +8,7 @@ class Bar extends React.Component {
   render() {
     return <div className="bar" id="NavigationBar">
 
-      <div className={(this.props.top > 800)?(this.props.open)?"openMenuButton open":"openMenuButton":"openMenuButton hide"} id="openMenuButton">
+      <div className={(this.props.top > 800)?(this.props.open)?"openMenuButton open":"openMenuButton":"openMenuButton hide"} id="openMenuButton" onClick={this.props.openedFullNav}>
         <div className="menuButtonLine line1"></div>
         <div className="menuButtonLine line2"></div>
         <div className="menuButtonLine line3"></div>

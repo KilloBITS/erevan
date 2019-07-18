@@ -14,6 +14,7 @@ import logotype from './images/logotype.svg';
 //import global block
 import PreloaderBlock from './components/includes/preloader.js';
 import NavigationBarBlock from './components/includes/bar.js';
+import FullNavigation from './components/includes/full_navigation.js';
 
 //import components
 import HeadBlock from './components/head_block.js';
@@ -33,11 +34,11 @@ class Erevan extends React.Component{
     const isLocation = (window.location.hostname === 'localhost')? (window.location.port === "3000")? window.location.origin.split('3000')[0]+'5003':window.location.origin:window.location.origin;
     super(props)
     this.state = {
+      fullnav: false,
       preloader: true,
       loader: isLocation+'/loader.gif',
       foodIcon: isLocation+'/icons/restaurant.svg',
       logotype: logotype,
-      openedMenu: false,
       bigMainLogo: false,
       scrollTop: 0,
       socials:{
@@ -59,15 +60,15 @@ class Erevan extends React.Component{
         },
         {
           title: 'Новини',
-          toelement:''
+          toelement:'NewsBlock'
         },
         {
           title: 'Галерея',
-          toelement:''
+          toelement:'GalleryBlock'
         },
         {
           title: 'Бронювання',
-          toelement:''
+          toelement:'BookNowBlock'
         }
       ],
       headBlock: {
@@ -515,11 +516,20 @@ class Erevan extends React.Component{
     });
   }
 
+  openedFullNav(){
+    if(this.state.fullnav){
+      this.setState({fullnav: false});
+    }else{
+      this.setState({fullnav: true});
+    }
+  }
+
   render(){
     return <div className="content" id="content">
       {this.state.preloader ? <Pace color="#27ae60" height={3}/> : null }
       <PreloaderBlock status={this.state.preloader} loader={this.state.loader} logotype={this.state.logotype}/>
-      <NavigationBarBlock openedMenu={this.state.openedMenu} socials={this.state.socials} top={this.state.scrollTop}/>
+      <NavigationBarBlock openedFullNav={this.openedFullNav.bind(this)} open={this.state.fullnav} socials={this.state.socials} top={this.state.scrollTop}/>
+      <FullNavigation open={this.state.fullnav} menu={this.state.menu} openedFullNav={this.openedFullNav.bind(this)}/>
       <HeadBlock top={this.state.scrollTop} data={this.state.headBlock} menu={this.state.menu} bigMainLogo={this.state.bigMainLogo} logotype={this.state.logotype}/>
       <AboutBlock data={this.state.aboutBlock} socials={this.state.socials}/>
       <MenuBlock data={this.state.menuBlock} top={this.state.scrollTop} menuBlockTop={this.state.menuBlockTop}/>
