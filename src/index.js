@@ -23,6 +23,7 @@ import StatisticBlock from './components/statistic_block.js';
 import NewsBlock from './components/news_block.js';
 import GalleryBlock from './components/gallery_block.js';
 import BookNowBlock from './components/booknow_block.js';
+import MapBlock from './components/map_block.js'
 import StaffBlock from './components/staff_block.js'
 import FooterBlock from './components/footer_block.js'
 library.add(fab, faCheckSquare, faCoffee, fas);
@@ -455,6 +456,11 @@ class Erevan extends React.Component{
         subTitle:'БРОНЮВАННЯ СТОЛИКА ЧИ БЕНКЕТА',
         slogan: 'Швидше забронюй столик'
       },
+      mapBlock: {
+        title:'< МИ НА КАРТІ >',
+        subTitle:'МИ НА КАРТІ',
+        slogan: 'Ресторан "Єреван" на карті'
+      },
       staffBlock: {
         title:'< Наш персонал >',
         subTitle:'Наш персонал',
@@ -521,6 +527,7 @@ class Erevan extends React.Component{
       <NewsBlock data={this.state.newsBlock}/>
       <GalleryBlock data={this.state.galleryBlock}/>
       <BookNowBlock data={this.state.bookNowBlock}/>
+      <MapBlock data={this.state.mapBlock}/>
       <StaffBlock data={this.state.staffBlock}/>
       <FooterBlock/>
     </div>
