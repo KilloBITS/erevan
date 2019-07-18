@@ -1,8 +1,6 @@
 import React from 'react';
-import ReactVivus from 'react-vivus';
 
 let toTopThisScroll = (e) => {
-  console.log(e);
   let toTopposition = document.getElementById(e.target.getAttribute('toelement')).offsetTop;
   document.getElementById('root').scrollTo({top: toTopposition, behavior: 'smooth'});
 }

@@ -468,19 +468,19 @@ class Erevan extends React.Component{
         slogan: 'Люди що дбають про вас',
         personal: [
           {
-            name: 'Игорь',
+            name: 'Владислав',
             title: '',
             position: 'Шеф-повар',
             photo: isLocation+'/staff/team1.png'
           },
           {
-            name: 'Валерий',
+            name: 'Валерій',
             title: '',
             position: 'Повар-кондитер',
             photo: isLocation+'/staff/team2.png'
           },
           {
-            name: 'Кристина',
+            name: 'Христина',
             title: '',
             position: 'Менеджер',
             photo: isLocation+'/staff/team3.png'
@@ -536,7 +536,7 @@ class Erevan extends React.Component{
       <StatisticBlock data={this.state.statisticBlock} top={this.state.scrollTop}/>
       <NewsBlock data={this.state.newsBlock}/>
       <GalleryBlock data={this.state.galleryBlock}/>
-      <BookNowBlock data={this.state.bookNowBlock}/>
+      <BookNowBlock data={this.state.bookNowBlock} menu={this.state.menu}/>
       <MapBlock data={this.state.mapBlock}/>
       <StaffBlock data={this.state.staffBlock}/>
       <FooterBlock/>
