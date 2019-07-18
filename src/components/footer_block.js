@@ -35,6 +35,12 @@ class FooterBlock extends React.Component {
               <img src={'https://instagram.flwo4-2.fna.fbcdn.net/vp/3ec80e9922ddba50f8cbfba70998c67f/5DBEA845/t51.2885-15/e35/60022428_872709779738350_6037330093813034180_n.jpg?_nc_ht=instagram.flwo4-2.fna.fbcdn.net'} alt=""/>
             </div>
           </div>
+          <div className="miniPhotoInstaText">
+          Ресторан смачної вірменської кухні👌<br/>
+          🍲цікаво про їжу;<br/>
+          🍖смачно про наші страви;<br/>
+          🏔️факти про традиції Вірменії.<br/>
+          </div>
         </div>
       </div>
     </div>

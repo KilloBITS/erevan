@@ -1184,6 +1184,7 @@ body{
   overflow: hidden;
   box-shadow: 0px 0px 0px 6px #1b1b1b, 0px 0px 0px 7px white;
   position: relative;
+  z-index: 1;
 }
 
 .mapStaticData{
@@ -1478,13 +1479,21 @@ body{
 }
 
 .miniPhotoInstaFooter{
-  width: 84px;
+  width: 80px;
   display: inline-block;
   overflow: hidden;
   float: left;
-  height: 84px;
+  height: 80px;
+  margin: 2px;
 }
 
 .miniPhotoInstaFooter img{
   height: 100px;
+}
+
+.miniPhotoInstaText{
+  float: left;
+  color: white;
+  margin-top: 10px;
+  padding-left: 15px;
 }
