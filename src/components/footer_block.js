@@ -1,25 +1,75 @@
 import React from 'react';
 
+let thisFooterMenuToTop = (e) => {
+  let toTopposition = document.getElementById(e.target.getAttribute('toelement')).offsetTop;
+  document.getElementById('root').scrollTo({top: toTopposition, behavior: 'smooth'});
+}
+
+let footerNavigationMenu = (footerDataMenu) => {
+    const menuBtn = footerDataMenu.map((comp, key) => <div key={key} onClick={thisFooterMenuToTop.bind(this)} toelement={comp.toelement} className="footerMenuNavLabel">{comp.title}</div>);
+    return menuBtn
+}
+
 class FooterBlock extends React.Component {
   render() {
     return <div className="block footer" id="FooterBlock">
       <div className="footerBlockContain">
-        <div className="footerMinBlock borderRight">
-
+        <div className="footerMinBlock borderRight footerNavigation">
+          <div className="miniFooterTitle">Карта сайту</div>
+          {footerNavigationMenu(this.props.menu)}
         </div>
         <div className="footerMinBlock borderRight">
+          <div className="miniFooterTitle">Контакти</div>
 
         </div>
         <div className="footerMinBlock">
-
+          <div className="miniFooterTitle">Графік гоботи</div>
+          <div className="footerGraficLine">
+            <div className="graficDay">Понеділок</div>
+            <div className="graficTime">10:00–22:00</div>
+          </div>
+          <div className="footerGraficLine">
+            <div className="graficDay">Вівторок</div>
+            <div className="graficTime">10:00–22:00</div>
+          </div>
+          <div className="footerGraficLine">
+            <div className="graficDay">Середа</div>
+            <div className="graficTime">10:00–22:00</div>
+          </div>
+          <div className="footerGraficLine">
+            <div className="graficDay">Четвер</div>
+            <div className="graficTime">10:00–22:00</div>
+          </div>
+          <div className="footerGraficLine">
+            <div className="graficDay">Пятниця</div>
+            <div className="graficTime">10:00–22:00</div>
+          </div>
+          <div className="footerGraficLine">
+            <div className="graficDay">Субота</div>
+            <div className="graficTime">11:00–22:00</div>
+          </div>
+          <div className="footerGraficLine">
+            <div className="graficDay">Неділя</div>
+            <div className="graficTime">11:00–22:00</div>
+          </div>
         </div>
         <div className="footerMinBlock borderLeft">
+          <div className="miniFooterTitle">Наш Інстаграм</div>
           <div className="footerInstagram">
             <div className="footerInstagramPhoto"></div>
             <div className="footerInstagramTag">
               <div className="tagTitle">Instagram</div>
               <div className="tag">#erevan_rest</div>
+              <div className="podpiska">
+                Підписатися
+              </div>
             </div>
+          </div>
+          <div className="miniPhotoInstaText">
+          Ресторан смачної вірменської кухні👌<br/>
+          🍲цікаво про їжу;<br/>
+          🍖смачно про наші страви;<br/>
+          🏔️факти про традиції Вірменії.<br/>
           </div>
           <div className="footerInstagramMiniPhoto">
             <div className="miniPhotoInstaFooter">
@@ -34,12 +84,6 @@ class FooterBlock extends React.Component {
             <div className="miniPhotoInstaFooter">
               <img src={'https://instagram.flwo4-2.fna.fbcdn.net/vp/3ec80e9922ddba50f8cbfba70998c67f/5DBEA845/t51.2885-15/e35/60022428_872709779738350_6037330093813034180_n.jpg?_nc_ht=instagram.flwo4-2.fna.fbcdn.net'} alt=""/>
             </div>
-          </div>
-          <div className="miniPhotoInstaText">
-          Ресторан смачної вірменської кухні👌<br/>
-          🍲цікаво про їжу;<br/>
-          🍖смачно про наші страви;<br/>
-          🏔️факти про традиції Вірменії.<br/>
           </div>
         </div>
       </div>

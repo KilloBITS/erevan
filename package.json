@@ -20,6 +20,8 @@
     "react-pace-progress": "^2.0.0",
     "react-photo-gallery": "^8.0.0",
     "react-scripts": "3.0.1",
+    "react-text-mask": "^5.4.3",
+    "react-timekeeper": "^1.1.0",
     "react-vivus": "0.0.2",
     "swiper": "^4.5.0",
     "turn": "0.0.0",

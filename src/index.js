@@ -27,6 +27,7 @@ import BookNowBlock from './components/booknow_block.js';
 import MapBlock from './components/map_block.js'
 import StaffBlock from './components/staff_block.js'
 import FooterBlock from './components/footer_block.js'
+import AuthorBlock from './components/author_block.js'
 library.add(fab, faCheckSquare, faCoffee, fas);
 
 class Erevan extends React.Component{
@@ -539,7 +540,8 @@ class Erevan extends React.Component{
       <BookNowBlock data={this.state.bookNowBlock} menu={this.state.menu}/>
       <MapBlock data={this.state.mapBlock}/>
       <StaffBlock data={this.state.staffBlock}/>
-      <FooterBlock/>
+      <FooterBlock menu={this.state.menu}/>
+      <AuthorBlock/>
     </div>
   }
 }
