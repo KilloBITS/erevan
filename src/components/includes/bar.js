@@ -14,10 +14,10 @@ class Bar extends React.Component {
         <div className="menuButtonLine line3"></div>
       </div>
       <div className="socials">
-        <div className="socialBtn">
+        <div className="socialBtn one">
           <a target="_blank" href={this.props.socials.instagram} rel="noopener noreferrer"><FontAwesomeIcon icon={['fab', 'instagram']} /></a>
         </div>
-        <div className="socialBtn">
+        <div className="socialBtn two">
           <a target="_blank" href={this.props.socials.facebook} rel="noopener noreferrer"><FontAwesomeIcon icon={['fab', 'facebook']} /></a>
         </div>
       </div>

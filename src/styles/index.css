@@ -218,22 +218,32 @@ body{
 .bar .socials{
   position: absolute;
   right: 0;
-  top: 50%;
-  transform: translate(0, -50%);
+  top: 5px;
   font-size: 22px;
-  width: 40px;
+  width: 120px;
   text-align: center;
   border-right: 0;
   cursor: pointer;
   z-index: 4;
+  overflow: hidden;
 }
 
 .bar .socials .socialBtn{
-  margin-bottom: 10px;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  z-index: -1;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 40px;
+  display: inline-block;
 }
 
 .bar .socials .socialBtn a{
-  color: rgb(233, 233, 233);
+  color: white;
   font-size: 24px;
   transition: .3s;
 }
@@ -497,6 +507,7 @@ body{
   line-height: 43px;
   transform: rotate(-2deg);
 }
+
 .head .headerFood{
   max-width: 600px;
 }
@@ -1149,6 +1160,8 @@ body{
 /** BookNowBlock **/
 .block.booknow{
   padding-top: 50px;
+  height: auto;
+  padding-bottom: 50px;
 }
 
 .booknow .slogan{
@@ -1171,6 +1184,19 @@ body{
   padding: 10px 0;
   margin-bottom: 10px;
   position: relative;
+}
+
+.reservationContentDatafull{
+  display: inline-block;
+  width: calc(100%);
+  padding: 10px 0;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.reservationContentDatafull .defaultButton{
+  width: 50%;
+  text-align: center;
 }
 
 .miniReservationTitle{

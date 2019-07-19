@@ -110,6 +110,9 @@ class BookNowBlock extends React.Component {
           />
           <div className="open_close_picker open_close_picker_number"></div>
         </div>
+        <div className="reservationContentDatafull">
+          <div className="defaultButton">Забронювати</div>
+        </div>
       </div>
     </div>
   }
