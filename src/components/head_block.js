@@ -50,21 +50,14 @@ class HeadBlock extends React.Component {
         </div>
       </div>
       <div className="background_block">
-        <div className={(this.props.bigMainLogo)?"mainLogo":"mainLogo hide"}>
-          <ReactVivus
-            id="Erevan_mainLogo"
-            option={{
-              file: this.props.logotype,
-              duration: 200,
-              animTimingFunction: 'EASE',
-              type: 'oneByOne',
-              onReady: console.log
-            }}
-          />
-        </div>
         <div className={(this.props.bigMainLogo)?"headerFood bgImg_1 show":"headerFood bgImg_1"}>
           <img src={this.props.data.background_1} alt="Єреван"/>
           <div className="headFoodLink">Оджахурі на кеци</div>
+        </div>
+
+        <div className={(this.props.bigMainLogo)?"headerFood bgImg_2 show":"headerFood bgImg_2"}>
+          <img src={this.props.data.background_2} alt="Єреван"/>
+          <div className="headFoodLink">Асорті з сала</div>
         </div>
       </div>
       <div className="blockToScroll"></div>

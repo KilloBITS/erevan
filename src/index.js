@@ -91,7 +91,7 @@ class Erevan extends React.Component{
           }
         ],
         background_1: isLocation+'/bg_el_1.svg',
-        background_2: isLocation+'/bg_el_2.png',
+        background_2: isLocation+'/bg_el_2.svg',
         fork: isLocation + '/fork.svg',
         knife: isLocation + '/knife.svg'
       },

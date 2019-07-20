@@ -23,7 +23,6 @@ class AboutBlock extends React.Component {
             {this.props.data.miniData[0].text}
           </div>
         </div>
-
         <div className="otherAboutInfoBlock">
           <div className="otherAboutInfoBlockIcon">
             <img src={this.props.data.miniData[1].icon} alt=""/>

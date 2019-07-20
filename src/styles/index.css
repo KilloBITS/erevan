@@ -339,10 +339,14 @@ body{
 
 /** HeadBlock **/
 .block.head{
-  /* background: url(https://colorlib.com/preview/theme/dingo/img/banner_bg.png); */
+  /* background: url(https://img.pngio.com/italian-food-on-vintage-wood-background-with-chalkboard-with-background-italian-food-png-1920_1080.png); */
   background-repeat: no-repeat;
   background-position: right top;
-  background-size: 700px;
+  background-size: cover;
+  background-position: center;
+  /* background-image: url(https://fbcd.co/product-lg/2549f6a….jpg); */
+  /* background-image: url(http://larisaivanovna.ru/wp-content/uploads/2017/02/OIHR970.jpg); */
+  /* background-image: url(https://markfisherfitness.com/wp-content/uploads/2016/11/AdobeStock_102081447.jpeg); */
 }
 
 .head .staticMenuHead{
@@ -484,57 +488,6 @@ body{
   z-index: 2;
 }
 
-.background_block .mainLogo{
-  position: absolute;
-  width: 100%;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  z-index: -1;
-  opacity: .1;
-  transition: 1s;
-}
-
-.background_block .mainLogo::before{
-  content: '';
-  width: 250px;
-  height: 250px;
-  position: absolute;
-  border-right: 1px solid #b2b2b2;
-  border-top: 1px solid #b1b1b1;
-  right: -100px;
-  top: -50px;
-}
-
-.background_block .mainLogo::after{
-  content: '';
-  width: 250px;
-  height: 250px;
-  position: absolute;
-  border-left: 1px solid #b2b2b2;
-  border-bottom: 1px solid #b1b1b1;
-  left: -100px;
-  bottom: -50px;
-}
-
-.mainLogo.hide{
-  opacity: 0;
-}
-
-.background_block .mainLogo .cls-1 {
-  fill: #fff7d900;
-  stroke: #f3f3f3;
-  stroke-width: 3px;
-}
-
-.background_block .mainLogo .cls-2 {
-  stroke: #760000;
-}
-
-.background_block .mainLogo .cls-3 {
-  fill: #c02929;
-}
-
 .head .headerFood.bgImg_1{
   object-fit: cover;
   max-width: 600px;
@@ -556,6 +509,7 @@ body{
   right: -100px;
   bottom: -100px;
   transform: rotate(-5deg);
+  width: 100%;
 }
 
 .head .headerFood img{
@@ -577,6 +531,14 @@ body{
   text-transform: uppercase;
   line-height: 43px;
   transform: rotate(-2deg);
+}
+
+.bgImg_2 .headFoodLink{
+  left: -20px;
+  transform: rotate(6deg);
+  top: 18px;
+  text-align: left;
+  padding-left: 48px;
 }
 
 .head .headerFood{
@@ -1643,6 +1605,7 @@ body{
 
 .tag{
   font-size: 14px;
+  font-style: italic;
 }
 
 .footerInstagramMiniPhoto{
