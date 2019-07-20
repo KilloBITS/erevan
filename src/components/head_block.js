@@ -22,13 +22,32 @@ class HeadBlock extends React.Component {
       bigLogo: false
     }
   }
-
   render() {
     return <div className="block head" id="HeadBlock">
       <div className="staticMenuHead">
         <div className="staticMenuHeadeBoard smhLeft"></div>
         {parseMenu(this.props.menu, true)}
         <div className="staticMenuHeadeBoard smhRight"></div>
+      </div>
+      <div className="mainTitleBlock">
+        <div className="restorantLogotype">
+          <ReactVivus
+            id="Erevan_mainLogoMini"
+            option={{
+              file: this.props.logotype,
+              duration: 200,
+              animTimingFunction: 'EASE',
+              type: 'oneByOne',
+              onReady: console.log
+            }}
+          />
+        </div>
+        <div className="resorantName">Ресторан "Єреван"</div>
+        <div className="resorantSubName">Вірменська кухня у Львові!</div>
+        <div className="restorantButtons">
+          <div className="defaultButton">Переглянути меню</div>
+          <div className="defaultButton">Забронювати столик</div>
+        </div>
       </div>
       <div className="background_block">
         <div className={(this.props.bigMainLogo)?"mainLogo":"mainLogo hide"}>
@@ -43,15 +62,9 @@ class HeadBlock extends React.Component {
             }}
           />
         </div>
-
         <div className={(this.props.bigMainLogo)?"headerFood bgImg_1 show":"headerFood bgImg_1"}>
           <img src={this.props.data.background_1} alt="Єреван"/>
           <div className="headFoodLink">Оджахурі на кеци</div>
-        </div>
-
-        <div className={(this.props.bigMainLogo)?"headerDinnerItem show":"headerDinnerItem"}>
-          <img src={this.props.data.fork} alt="fork" id="forkImage"/>
-          <img src={this.props.data.knife} alt="knife" id="knifeImage"/>
         </div>
       </div>
       <div className="blockToScroll"></div>

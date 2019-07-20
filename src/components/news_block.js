@@ -23,7 +23,7 @@ let parseNews = (data) => {
 
 const multipleRowSlidesLayoutMobile = (newsData) => {
   const params = {
-    slidesPerView: 1,
+    slidesPerView: (document.body.clientWidth > 800)?3:1,
     spaceBetween: 30,
     navigation: {
       nextEl: '.swiper-button-next',

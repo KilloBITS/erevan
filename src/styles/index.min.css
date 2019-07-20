@@ -8,18 +8,29 @@
       overflow-x: hidden;
     }
 
-    .block{
-      overflow-x: hidden;
+    .title_block .thisTitle{
+      font-size: 32px;
+    }
+
+    .title_block {
+      margin: auto;
+      width: 100%;
+      position: relative;
+      margin-bottom: 50px;
+      text-align: center;
+      overflow: hidden;
     }
 
     .slogan{
       width: calc(100% - 20px)!important;
     }
+
     /** NavigationBar **/
     .bar .socials{
       bottom: 10px;
-      right: -12px;
+      right: 0;
       top: auto;
+      width: auto;
     }
 
     .bar .openMenuButton{
@@ -150,6 +161,24 @@
       margin-top: 30px;
     }
 
+    /** BookNowBlock **/
+    .reservationContentData {
+      display: block;
+      width: calc(100% - 20px);
+      margin: auto;
+      margin-bottom: 10px;
+      position: relative;
+    }
+
+    .reservationInput {
+      width: calc(100% - 10px);
+    }
+
+    .open_close_picker {
+      right: 10px;
+      bottom: 14px;
+    }
+
     /** MapBlock **/
     .mapContent {
       width: calc(100% - 30px);
@@ -172,6 +201,74 @@
     /** GalleryBlock **/
     .galleryFooter{
       bottom: -1px;
+    }
+
+    /**  **/
+    .block.footer {
+      max-height: none;
+      background-attachment: fixed;
+      background-color: #690000;
+      position: relative;
+      height: auto;
+      /* overflow: hidden; */
+    }
+
+    .block.footer::before{
+      background-size: cover;
+    }
+
+    .footerBlockContain {
+      position: relative;
+      width: 100%;
+      height: auto;
+      top: 0;
+      left: 0px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    .footerNavigation{
+      padding: 0;
+    }
+
+    .footerMinBlock {
+      width: 100%;
+      position: relative;
+      height: auto;
+      display: inline-block;
+      float: none;
+      margin-top: 20px;
+    }
+
+    .footerMinBlock .footerMenuNavLabel {
+      margin-bottom: 0px;
+      cursor: pointer;
+      transition: 0.3s;
+      color: #e9e9e9;
+      padding-left: 20px;
+      width: 100%;
+      text-align: center;
+      font-size: 20px;
+      padding: 0;
+    }
+
+    .footerGraficLine div.graficTitle {
+      width: 100%;
+      font-size: 18px;
+      padding: 0;
+      text-align: center;
+    }
+
+    .miniPhotoInstaText{
+      width: calc(100% - 15px);
+    }
+
+    .footerGraficLine div.graficData {
+      width: 100%;
+      margin-top: 5px;
+      cursor: pointer;
+      padding: 0;
+      text-align: center;
     }
 
     /** Sviper **/
