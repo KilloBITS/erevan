@@ -1600,18 +1600,21 @@ body{
 }
 
 .footerInstagramMiniPhoto{
-  width: 100%;
+  width: fit-content;
   float: left;
   margin-top: 15px;
+  margin-left: 12px;
 }
 
 .miniPhotoInstaFooter{
-  width: 80px;
+  width: 70px;
   display: inline-block;
   overflow: hidden;
   float: left;
-  height: 80px;
+  height: 70px;
   margin: 2px;
+  border: 1px solid wheat;
+  border-radius: 5px;
 }
 
 .miniPhotoInstaFooter img{
@@ -1634,11 +1637,17 @@ body{
 .footerMinBlock .footerMenuNavLabel{
   margin-bottom: 0px;
   cursor: pointer;
-  /* font-family: Amaticscbold; */
-  font-size: 22px;
+  font-size: 18px;
   transition: 0.3s;
   color: #e9e9e9;
-  /* letter-spacing: 1px; */
+  padding-left: 20px;
+  width: calc(100% - 20px);
+}
+
+.footerMinBlock .footerMenuNavLabel:hover{
+  padding-left: 25px;
+  color: #ffba8c;
+  width: calc(100% - 25px);
 }
 
 .miniFooterTitle{
@@ -1700,6 +1709,16 @@ body{
   color: black;
 }
 
+.footerGraficLine div.graficTitle{
+  width: 100%;
+  font-size: 18px;
+}
+
+.footerGraficLine div.graficData{
+  width: 100%;
+  margin-top: 5px;
+  cursor: pointer;
+}
 /** AuthorBlock **/
 .block.author{
   height: auto;
@@ -1723,4 +1742,23 @@ body{
 .authorContent svg{
   margin: 0px 10px;
   color: rgb(201, 169, 0);
+}
+
+.callbackArea{
+  width: calc(100% - 120px);
+  margin-left: 15px;
+  height: 25px;
+  float: left;
+  margin-top: 10px;
+}
+
+.callbackAreaBtn{
+  float: left;
+  width: 80px;
+  height: 31px;
+  margin-top: 10px;
+}
+
+._callBack{
+  margin-top: 50px;
 }

@@ -20,7 +20,21 @@ class FooterBlock extends React.Component {
         </div>
         <div className="footerMinBlock borderRight">
           <div className="miniFooterTitle">Контакти</div>
+          <div className="footerGraficLine">
+            <div className="graficTitle">Email:</div>
+            <div className="graficData">restoran.erevan@gmail.com</div>
+          </div>
+          <div className="footerGraficLine">
+            <div className="graficTitle">Телефон:</div>
+            <div className="graficData">+38 (032) 237 77 21 </div>
+            <div className="graficData">+38 (098) 174 24 00</div>
+          </div>
 
+          <div className="footerGraficLine _callBack">
+            <div className="graficTitle">Зворотній звязок:</div>
+            <input type="email" className="callbackArea"/>
+            <input type="button" className="callbackAreaBtn"/>
+          </div>
         </div>
         <div className="footerMinBlock">
           <div className="miniFooterTitle">Графік гоботи</div>

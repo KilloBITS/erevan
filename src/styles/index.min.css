@@ -1,0 +1,181 @@
+@media screen and (max-width: 880px) {
+    #root{
+      width: 100%;
+      height: 100%;
+      position: relative;
+      overflow-y: scroll;
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
+    .block{
+      overflow-x: hidden;
+    }
+
+    .slogan{
+      width: calc(100% - 20px)!important;
+    }
+    /** NavigationBar **/
+    .bar .socials{
+      bottom: 10px;
+      right: -12px;
+      top: auto;
+    }
+
+    .bar .openMenuButton{
+      top: 15px;
+      right: 10px;
+    }
+
+    .navigatorBtn.totop{
+      right: 20px;
+    }
+
+    .bar .openMenuButton.hide {
+      opacity: 1;
+      z-index: 11;
+    }
+
+    /** .statisticContent **/
+    .statisticContent {
+      position: relative;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+    }
+
+    /**  **/
+    .full_nav.open .fullNavContentBlock {
+      top: 50%;
+      opacity: 1;
+      color: white;
+      left: 50%;
+    }
+
+    .full_nav .fullNavBackBlock::before, .full_nav .fullNavBackBlock::after{
+      height: 51%;
+    }
+
+    .fullNavContentBlock{
+      left: 50%;
+    }
+
+    .fullNavMenuBtn{
+      font-size: 40px;
+    }
+
+    /** HeadBlock **/
+    .block.head{
+      overflow: hidden;
+    }
+
+    .head .bottomBorder svg{
+      bottom: 0px;
+    }
+
+    .head .staticMenuHead{
+      display: none;
+    }
+
+    .head .headerDinnerItem{
+      display: none;
+    }
+
+    .staticMenuHead .staticMenuHeadeBoard{
+      display: none;
+    }
+
+    /** AboutBlock **/
+    .about .aboutContentBlock{
+      width: calc(100% - 60px);
+    }
+
+    .otherAboutInfo .otherAboutInfoBlock {
+      display: block;
+      width: 250px;
+      text-align: center;
+      margin: auto;
+      margin-bottom: 30px;
+    }
+
+    /** MenuBlock **/
+    .menu .topBorder{
+      top: -1px;
+    }
+
+    .menuContentBlock .menuCategoryBlock {
+      width: 170px;
+      height: 170px;
+    }
+
+    /** StatisticBlock **/
+    .block.statistic {
+      max-height: none;
+      overflow: hidden;
+      height: auto;
+    }
+
+    .statistic .statisticBackground {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+
+    .statistic .statisticBackground video {
+      position: absolute;
+      width: auto;
+      top: 0;
+      transform: none;
+      height: 100%;
+    }
+
+    .statisticBlockData {
+      display: inline-block;
+      text-align: center;
+      width: calc(50% - 10px);
+      margin: 0 3px;
+      padding: 20px 0;
+      border: 2px solid #f3f3f3;
+      margin-bottom: 15px;
+      float: left;
+      height: 167px;
+    }
+
+    .statisticImage {
+      width: 50px;
+    }
+
+    .statisticBlockGlobalData{
+      margin-top: 30px;
+    }
+
+    /** MapBlock **/
+    .mapContent {
+      width: calc(100% - 30px);
+      height: 400px;
+    }
+
+    .mapStaticData {
+      position: absolute;
+      left: 5px;
+      top: 5px;
+      width: 270px;
+    }
+    .mapStaticData_line {
+      width: calc(100% - 20px);
+      display: inline-block;
+      padding: 2px 8px;
+      text-transform: uppercase;
+    }
+
+    /** GalleryBlock **/
+    .galleryFooter{
+      bottom: -1px;
+    }
+
+    /** Sviper **/
+    .swiper-container{
+      width: calc(100% - 30px);
+    }
+}
