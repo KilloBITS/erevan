@@ -1156,7 +1156,7 @@ body{
 }
 
 .ReactGridGallery_tile{
-  
+  display: inline-block;
 }
 
 /** BookNowBlock **/
