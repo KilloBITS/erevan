@@ -4,6 +4,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 class AuthorBlock extends React.Component {
   render() {
     return <div className="block author" id="AuthorBlock">
+      <div className="authorCenterToTop">
+        <FontAwesomeIcon icon={['fas', 'arrow-up']}/>
+      </div>
       <div className="authorContent">
         <FontAwesomeIcon icon={['fas', 'crown']}/>
         Site created by <a href={'http://kaleniuk.top'} target="_blank">Ihor Kaleniuk</a>

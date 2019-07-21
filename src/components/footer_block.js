@@ -1,4 +1,5 @@
 import React from 'react';
+import TitleLine from './includes/title_line.js';
 
 let thisFooterMenuToTop = (e) => {
   let toTopposition = document.getElementById(e.target.getAttribute('toelement')).offsetTop;
@@ -15,11 +16,14 @@ class FooterBlock extends React.Component {
     return <div className="block footer" id="FooterBlock">
       <div className="footerBlockContain">
         <div className="footerMinBlock borderRight footerNavigation">
-          <div className="miniFooterTitle">Карта сайту</div>
+          <div className="miniFooterTitle">- Карта сайту -</div>
+          <TitleLine color={'#f5a0a0'}/>
           {footerNavigationMenu(this.props.menu)}
+          <div className="footerMenuNavLabel">Для працівників</div>
         </div>
         <div className="footerMinBlock borderRight">
-          <div className="miniFooterTitle">Контакти</div>
+          <div className="miniFooterTitle">- Контакти -</div>
+          <TitleLine color={'#f5a0a0'}/>
           <div className="footerGraficLine">
             <div className="graficTitle">Email:</div>
             <div className="graficData">restoran.erevan@gmail.com</div>
@@ -29,15 +33,10 @@ class FooterBlock extends React.Component {
             <div className="graficData">+38 (032) 237 77 21 </div>
             <div className="graficData">+38 (098) 174 24 00</div>
           </div>
-
-          <div className="footerGraficLine _callBack">
-            <div className="graficTitle">Зворотній звязок:</div>
-            <input type="email" className="callbackArea"/>
-            <input type="button" className="callbackAreaBtn"/>
-          </div>
         </div>
         <div className="footerMinBlock">
-          <div className="miniFooterTitle">Графік гоботи</div>
+          <div className="miniFooterTitle">- Графік гоботи -</div>
+          <TitleLine color={'#f5a0a0'}/>
           <div className="footerGraficLine">
             <div className="graficDay">Понеділок</div>
             <div className="graficTime">10:00–22:00</div>
@@ -68,7 +67,8 @@ class FooterBlock extends React.Component {
           </div>
         </div>
         <div className="footerMinBlock borderLeft">
-          <div className="miniFooterTitle">Наш Інстаграм</div>
+          <div className="miniFooterTitle">- Наш Інстаграм -</div>
+          <TitleLine color={'#f5a0a0'}/>
           <div className="footerInstagram">
             <div className="footerInstagramPhoto"></div>
             <div className="footerInstagramTag">

@@ -16,6 +16,7 @@ import PreloaderBlock from './components/includes/preloader.js';
 import NavigationBarBlock from './components/includes/bar.js';
 import FullNavigation from './components/includes/full_navigation.js';
 import FullMenu from './components/includes/full_menu.js';
+import SignIn from './components/includes/signin.js'
 //import components
 import HeadBlock from './components/head_block.js';
 import AboutBlock from './components/about_block.js';
@@ -36,6 +37,8 @@ class Erevan extends React.Component{
     super(props)
     this.state = {
       openfullMenu: false,
+      openedSignIn: false,
+      openBarSocials: false,
       fullnav: false,
       preloader: true,
       loader: isLocation+'/loader.gif',
@@ -470,15 +473,21 @@ class Erevan extends React.Component{
         slogan: 'Люди що дбають про вас',
         personal: [
           {
+            name: 'Юлія',
+            title: '',
+            position: 'Повар',
+            photo: isLocation+'/staff/team4.png'
+          },
+          {
             name: 'Владислав',
             title: '',
-            position: 'Шеф-повар',
+            position: 'Повар-кондитер',
             photo: isLocation+'/staff/team1.png'
           },
           {
             name: 'Валерій',
             title: '',
-            position: 'Повар-кондитер',
+            position: 'Шеф-повар',
             photo: isLocation+'/staff/team2.png'
           },
           {
@@ -486,6 +495,12 @@ class Erevan extends React.Component{
             title: '',
             position: 'Менеджер',
             photo: isLocation+'/staff/team3.png'
+          },
+          {
+            name: 'Сергій',
+            title: '',
+            position: 'Офіціант',
+            photo: isLocation+'/staff/team5.png'
           }
         ]
       },
@@ -538,11 +553,36 @@ class Erevan extends React.Component{
     }
   }
 
+  openCloseBarSocials(){
+    if(this.state.openBarSocials){
+      this.setState({openBarSocials: false});
+    }else{
+      this.setState({openBarSocials: true});
+    }
+  }
+
+  openCloseSignIn(){
+    if(this.state.openedSignIn){
+      this.setState({openedSignIn: false});
+    }else{
+      this.setState({openedSignIn: true});
+    }
+  }
+
   render(){
     return <div className="content" id="content">
       {this.state.preloader ? <Pace color="#27ae60" height={3}/> : null }
       <PreloaderBlock status={this.state.preloader} loader={this.state.loader} logotype={this.state.logotype}/>
-      <NavigationBarBlock openedFullNav={this.openedFullNav.bind(this)} open={this.state.fullnav} socials={this.state.socials} top={this.state.scrollTop}/>
+      <NavigationBarBlock
+        openedFullNav={this.openedFullNav.bind(this)}
+        open={this.state.fullnav}
+        socials={this.state.socials}
+        top={this.state.scrollTop}
+        openBarSocials={this.state.openBarSocials}
+        openCloseBarSocials={this.openCloseBarSocials.bind(this)}
+        openCloseSignIn={this.openCloseSignIn.bind(this)}
+      />
+      <SignIn openedSignIn={this.state.openedSignIn}/>
       <FullNavigation open={this.state.fullnav} menu={this.state.menu} openedFullNav={this.openedFullNav.bind(this)}/>
       <FullMenu open={this.state.openfullMenu} menuimages={this.state.menuBlock.menuimages} closemenu={this.closeFullMenuBlock.bind(this)}/>
       <HeadBlock

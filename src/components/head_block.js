@@ -50,12 +50,12 @@ class HeadBlock extends React.Component {
         </div>
       </div>
       <div className="background_block">
-        <div className={(this.props.bigMainLogo)?"headerFood bgImg_1 show":"headerFood bgImg_1"}>
+        <div className={(this.props.bigMainLogo && this.props.top <= 0)?"headerFood bgImg_1 show":"headerFood bgImg_1"}>
           <img src={this.props.data.background_1} alt="Єреван"/>
           <div className="headFoodLink">Оджахурі на кеци</div>
         </div>
 
-        <div className={(this.props.bigMainLogo)?"headerFood bgImg_2 show":"headerFood bgImg_2"}>
+        <div className={(this.props.bigMainLogo && this.props.top <= 0)?"headerFood bgImg_2 show":"headerFood bgImg_2"}>
           <img src={this.props.data.background_2} alt="Єреван"/>
           <div className="headFoodLink">Асорті з сала</div>
         </div>
