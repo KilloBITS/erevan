@@ -13,6 +13,7 @@ class GalleryBlock extends React.Component {
         images={this.props.data.images}
         backdropClosesModal={true}
         imageCountSeparator="/"
+        margin={1}
       />
       <div className="galleryFooter">
         <div className="defaultButton">Більше фотографій</div>
