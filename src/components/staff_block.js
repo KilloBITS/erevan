@@ -1,4 +1,5 @@
 import React from 'react';
+import Swiper from 'react-id-swiper';
 import Title from './includes/title.js';
 
 let parseStaff = (dataStaff) => {
@@ -10,6 +11,22 @@ let parseStaff = (dataStaff) => {
     return staff
 }
 
+const multipleRowSlidesLayoutMobile = (newsData) => {
+  const params = {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    }
+  }
+  return (
+    <Swiper {...params}>
+      {parseStaff(newsData)}
+    </Swiper>
+  )
+};
+
 class StaffBlock extends React.Component {
   render() {
     return <div className="block staff" id="StaffBlock">
@@ -18,7 +35,7 @@ class StaffBlock extends React.Component {
         {this.props.data.slogan}
       </div>
       <div className="staffContent">
-        {parseStaff(this.props.data.personal)}
+        {(document.body.clientWidth > 916)?parseStaff(this.props.data.personal):multipleRowSlidesLayoutMobile(this.props.data.personal)}
       </div>
     </div>
   }

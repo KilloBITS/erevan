@@ -1,3 +1,69 @@
+@media screen and (max-width: 1180px) {
+  /** StatisticBlock **/
+  .block.statistic {
+    max-height: none;
+    overflow: hidden;
+    height: auto;
+  }
+
+  .statisticContent {
+    position: relative;
+    top: 0;
+    height: 100%;
+    width: auto;
+    z-index: 2;
+  }
+
+  .statistic .statisticBackground {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .statistic .statisticBackground video {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    transform: none;
+    height: auto;
+  }
+
+  .statisticBlockData {
+    display: inline-block;
+    text-align: center;
+    width: calc(50% - 10px);
+    margin: 0 3px;
+    padding: 20px 0;
+    border: 2px solid #f3f3f3;
+    margin-bottom: 15px;
+    float: left;
+    height: 167px;
+    transition: 0.3s;
+  }
+
+  .statisticImage {
+    width: 50px;
+  }
+
+  .statisticBlockGlobalData{
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 916px) {
+  .staff .swiper-container{
+    max-width: 400px;
+    width: 100%;
+    overflow: hiden;
+    z-index: 0;
+    padding-bottom: 0;
+  }
+
+  .background_block{
+    display: none;
+  }
+}
+
 @media screen and (max-width: 880px) {
     #root{
       width: 100%;
@@ -44,16 +110,7 @@
 
     .bar .openMenuButton.hide {
       opacity: 1;
-      z-index: 11;
-    }
-
-    /** .statisticContent **/
-    .statisticContent {
-      position: relative;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 2;
+      z-index: 12;
     }
 
     /**  **/
@@ -96,6 +153,19 @@
     .staticMenuHead .staticMenuHeadeBoard{
       display: none;
     }
+    .restorantButtons {
+      position: absolute;
+      top: calc(100% + 49px);
+      width: 100%;
+      left: -38px;
+    }
+
+    .restorantButtons .defaultButton {
+      display: inline-block;
+      width: 100%;
+      float: left;
+      margin: 7px 5px;
+    }
 
     /** AboutBlock **/
     .about .aboutContentBlock{
@@ -121,16 +191,12 @@
     }
 
     /** StatisticBlock **/
-    .block.statistic {
-      max-height: none;
-      overflow: hidden;
-      height: auto;
-    }
-
-    .statistic .statisticBackground {
-      position: absolute;
-      width: 100%;
-      height: 100%;
+    .statisticContent {
+      position: relative;
+      top: 0;
+      height:  100%;
+      width: auto;
+      z-index: 2;
     }
 
     .statistic .statisticBackground video {
@@ -138,27 +204,8 @@
       width: auto;
       top: 0;
       transform: none;
+      height: auto;
       height: 100%;
-    }
-
-    .statisticBlockData {
-      display: inline-block;
-      text-align: center;
-      width: calc(50% - 10px);
-      margin: 0 3px;
-      padding: 20px 0;
-      border: 2px solid #f3f3f3;
-      margin-bottom: 15px;
-      float: left;
-      height: 167px;
-    }
-
-    .statisticImage {
-      width: 50px;
-    }
-
-    .statisticBlockGlobalData{
-      margin-top: 30px;
     }
 
     /** BookNowBlock **/
@@ -203,7 +250,12 @@
       bottom: -1px;
     }
 
-    /**  **/
+    /** StaffBlock **/
+    .staff .staffContent .blockOfStaff {
+      text-align: center;
+    }
+
+    /** FooterBlock **/
     .block.footer {
       max-height: none;
       background-attachment: fixed;

@@ -74,9 +74,11 @@ class FooterBlock extends React.Component {
             <div className="footerInstagramTag">
               <div className="tagTitle">Instagram</div>
               <div className="tag">#erevan_rest</div>
+              <a href={'https://www.instagram.com/erevan_rest/'} target="_blank" rel="noopener noreferrer">
               <div className="podpiska">
                 Підписатися
               </div>
+              </a>
             </div>
           </div>
           <div className="miniPhotoInstaText">
