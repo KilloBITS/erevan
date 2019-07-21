@@ -1155,6 +1155,10 @@ body{
   margin: auto;
 }
 
+.ReactGridGallery_tile{
+  
+}
+
 /** BookNowBlock **/
 .block.booknow{
   padding-top: 50px;
