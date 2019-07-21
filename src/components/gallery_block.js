@@ -1,6 +1,7 @@
 import React from 'react';
 import Title from './includes/title.js';
 import Gallery from 'react-grid-gallery';
+import Fade from 'react-reveal/Fade';
 
 class GalleryBlock extends React.Component {
   render() {
@@ -9,12 +10,14 @@ class GalleryBlock extends React.Component {
       <div className="slogan">
         {this.props.data.slogan}
       </div>
+      <Fade>
       <Gallery
         images={this.props.data.images}
         backdropClosesModal={true}
         imageCountSeparator="/"
         margin={1}
       />
+      </Fade>
       <div className="galleryFooter">
         <div className="defaultButton">Більше фотографій</div>
       </div>

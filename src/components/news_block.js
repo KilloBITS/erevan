@@ -1,7 +1,7 @@
 import React from 'react';
 import Swiper from 'react-id-swiper';
 import Title from './includes/title.js';
-
+import Fade from 'react-reveal/Fade';
 
 let parseNews = (data) => {
   const dataBlock = data.map((comp, key) => <div key={key} className="newsthisBlock">
@@ -35,9 +35,11 @@ const multipleRowSlidesLayoutMobile = (newsData) => {
     }
   }
   return (
-    <Swiper {...params}>
-      {parseNews(newsData)}
-    </Swiper>
+    <Fade delay={50}>
+      <Swiper {...params}>
+        {parseNews(newsData)}
+      </Swiper>
+    </Fade>
   )
 };
 

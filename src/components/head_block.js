@@ -45,7 +45,7 @@ class HeadBlock extends React.Component {
         <div className="resorantName">Ресторан "Єреван"</div>
         <div className="resorantSubName">Вірменська кухня у Львові!</div>
         <div className="restorantButtons">
-          <div className="defaultButton">Переглянути меню</div>
+          <div className="defaultButton" onClick={this.props.openfullmenublock.bind(this)}>Переглянути меню</div>
           <div className="defaultButton">Забронювати столик</div>
         </div>
       </div>

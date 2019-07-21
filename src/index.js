@@ -15,7 +15,7 @@ import logotype from './images/logotype.svg';
 import PreloaderBlock from './components/includes/preloader.js';
 import NavigationBarBlock from './components/includes/bar.js';
 import FullNavigation from './components/includes/full_navigation.js';
-
+import FullMenu from './components/includes/full_menu.js';
 //import components
 import HeadBlock from './components/head_block.js';
 import AboutBlock from './components/about_block.js';
@@ -35,6 +35,7 @@ class Erevan extends React.Component{
     const isLocation = (window.location.hostname === 'localhost')? (window.location.port === "3000")? window.location.origin.split('3000')[0]+'5003':window.location.origin:window.location.origin;
     super(props)
     this.state = {
+      openfullMenu: false,
       fullnav: false,
       preloader: true,
       loader: isLocation+'/loader.gif',
@@ -499,6 +500,18 @@ class Erevan extends React.Component{
     this.componentScrollFunction = this.componentScrollFunction.bind(this);
   }
 
+  openFullMenuBlock(){
+    this.setState({
+      openfullMenu: true
+    });
+  }
+
+  closeFullMenuBlock(){
+    this.setState({
+      openfullMenu: false
+    })
+  }
+
   componentDidMount(){
     setTimeout(() => {
       this.setState({
@@ -531,9 +544,23 @@ class Erevan extends React.Component{
       <PreloaderBlock status={this.state.preloader} loader={this.state.loader} logotype={this.state.logotype}/>
       <NavigationBarBlock openedFullNav={this.openedFullNav.bind(this)} open={this.state.fullnav} socials={this.state.socials} top={this.state.scrollTop}/>
       <FullNavigation open={this.state.fullnav} menu={this.state.menu} openedFullNav={this.openedFullNav.bind(this)}/>
-      <HeadBlock top={this.state.scrollTop} data={this.state.headBlock} menu={this.state.menu} bigMainLogo={this.state.bigMainLogo} logotype={this.state.logotype}/>
+      <FullMenu open={this.state.openfullMenu} menuimages={this.state.menuBlock.menuimages} closemenu={this.closeFullMenuBlock.bind(this)}/>
+      <HeadBlock
+        top={this.state.scrollTop}
+        data={this.state.headBlock}
+        menu={this.state.menu}
+        bigMainLogo={this.state.bigMainLogo}
+        logotype={this.state.logotype}
+        openfullmenublock={this.openFullMenuBlock.bind(this)}
+      />
       <AboutBlock data={this.state.aboutBlock} socials={this.state.socials}/>
-      <MenuBlock data={this.state.menuBlock} top={this.state.scrollTop} menuBlockTop={this.state.menuBlockTop}/>
+      <MenuBlock
+        data={this.state.menuBlock}
+        top={this.state.scrollTop}
+        menuBlockTop={this.state.menuBlockTop}
+        closefullmenublock={this.closeFullMenuBlock.bind(this)}
+        openfullmenublock={this.openFullMenuBlock.bind(this)}
+      />
       <StatisticBlock data={this.state.statisticBlock} top={this.state.scrollTop}/>
       <NewsBlock data={this.state.newsBlock}/>
       <GalleryBlock data={this.state.galleryBlock}/>

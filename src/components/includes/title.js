@@ -1,9 +1,10 @@
 import React from 'react';
+import Fade from 'react-reveal/Fade';
 
 class Title extends React.Component {
   render() {
     return <div className="title_block">
-      <div className="thisTitle" style={{color: this.props.color}}>{this.props.title}</div>
+      <Fade delay={50}><div className="thisTitle" style={{color: this.props.color}}>{this.props.title}</div></Fade>
       <div className="thisSubTitle" style={{color: this.props.subcolor}}>{this.props.subtitle}</div>
       <div className="titleLine">
       <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"

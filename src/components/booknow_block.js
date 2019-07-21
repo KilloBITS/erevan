@@ -3,6 +3,7 @@ import TimeKeeper from 'react-timekeeper';
 import MaskedInput from 'react-text-mask'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Title from './includes/title.js';
+import Fade from 'react-reveal/Fade';
 
 class BookNowBlock extends React.Component {
   constructor(props){
@@ -41,6 +42,7 @@ class BookNowBlock extends React.Component {
       <div className="slogan">
         {this.props.data.slogan}
       </div>
+      <Fade>
       <div className="reservationContent">
         <div className="reservationContentData">
           <div className="miniReservationTitle">
@@ -114,6 +116,7 @@ class BookNowBlock extends React.Component {
           <div className="defaultButton">Забронювати</div>
         </div>
       </div>
+      </Fade>
     </div>
   }
 }

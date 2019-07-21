@@ -1130,7 +1130,7 @@ body{
 .block.gallery{
   overflow: hidden;
   height: auto;
-  max-height: 845px;
+  max-height: 700px;
   padding-top: 75px;
 }
 

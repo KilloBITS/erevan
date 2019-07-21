@@ -1,39 +1,21 @@
 import React from 'react';
 import Title from './includes/title.js';
-import FullMenu from './includes/full_menu.js';
+import Fade from 'react-reveal/Fade';
+
 let parseMenuBlocs = (arr) => {
-  const menu = arr.map((a, key) => <div key={key} className="toZoomImageBlock menuCategoryBlock">
+  const menu = arr.map((a, key) =><Fade delay={50+key} key={key}><div className="toZoomImageBlock menuCategoryBlock">
     <div className="foodLength">{a.description}</div>
     <div className="backgroundFitBlock">
       <img src={a.background} alt={a.title} className="backgroundFoodsImage"/>
     </div>
     <div className="menuFoodsTitle">{a.title}</div>
-  </div>);
+  </div></Fade>);
   return menu
 }
 
 class MenuBlock extends React.Component {
-  constructor(props){
-    super(props);
-    this.state = {
-      openfullMenu: false
-    }
-  }
-
-  openFullMenuBlock(){
-    this.setState({
-      openfullMenu: true
-    });
-  }
-
-  closeFullMenuBlock(){
-    this.setState({
-      openfullMenu: false
-    })
-  }
   render() {
     return <div className="block menu" id="MenuBlock">
-      <FullMenu open={this.state.openfullMenu} menuimages={this.props.data.menuimages} closemenu={this.closeFullMenuBlock.bind(this)}/>
       <div className={(this.props.top >= this.props.menuBlockTop)?"topBorder isScrolled":"topBorder"}>
         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
            viewBox="0 0 1440 129" style={{enableBackground:"new 0 0 1440 129"}}>
@@ -48,7 +30,7 @@ class MenuBlock extends React.Component {
       <div className="menuContentBlock">
         {parseMenuBlocs(this.props.data.foodsCategory)}
       </div>
-      <div className="defaultButton" onClick={this.openFullMenuBlock.bind(this)}>
+      <div className="defaultButton" onClick={this.props.openfullmenublock.bind(this)}>
         Переглянути повне меню
       </div>
     </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import Length from './includes/length.js';
+import Fade from 'react-reveal/Fade';
 
 class StatisticBlock extends React.Component {
   render() {
@@ -12,6 +13,7 @@ class StatisticBlock extends React.Component {
       </div>
       <div className="statisticContent">
         <div className="statisticBlockGlobalData">
+          <Fade delay={50}>
           <div className="statisticBlockData">
             <div className="statisticImage">
               <img src={this.props.data.icon1} alt=""/>
@@ -22,7 +24,8 @@ class StatisticBlock extends React.Component {
               <Length number={130} speed={27} symbol="+" id="num0" top={this.props.top}/>
             </div>
           </div>
-
+          </Fade>
+          <Fade delay={50}>
           <div className="statisticBlockData">
             <div className="statisticImage">
               <img src={this.props.data.icon2} alt=""/>
@@ -33,7 +36,8 @@ class StatisticBlock extends React.Component {
               <Length number={170} speed={20} symbol="+" id="num1" top={this.props.top}/>
             </div>
           </div>
-
+          </Fade>
+          <Fade delay={50}>
           <div className="statisticBlockData">
             <div className="statisticImage">
               <img src={this.props.data.icon3} alt=""/>
@@ -44,7 +48,8 @@ class StatisticBlock extends React.Component {
               <Length number={100} speed={30} symbol="+" id="num2" top={this.props.top}/>
             </div>
           </div>
-
+          </Fade>
+          <Fade delay={50}>
           <div className="statisticBlockData">
             <div className="statisticImage">
               <img src={this.props.data.icon4} alt=""/>
@@ -55,6 +60,7 @@ class StatisticBlock extends React.Component {
               <Length number={30} speed={100} symbol="+" id="num3" top={this.props.top}/>
             </div>
           </div>
+          </Fade>
         </div>
       </div>
     </div>
