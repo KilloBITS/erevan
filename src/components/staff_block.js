@@ -30,13 +30,25 @@ const multipleRowSlidesLayoutMobile = (newsData) => {
 class StaffBlock extends React.Component {
   render() {
     return <div className="block staff" id="StaffBlock">
-      <Title title={this.props.data.title} subtitle={this.props.data.subTitle} color="rgb(22, 22, 22)" subcolor="rgba(22, 22, 22, 0.1)"/>
+      <Title title={this.props.data.title} subtitle={this.props.data.subTitle} color="#e9e9e9" subcolor="rgba(232, 232, 232, 0.1)"/>
       <div className="slogan">
         {this.props.data.slogan}
       </div>
       <div className="staffContent">
         {(document.body.clientWidth > 916)?parseStaff(this.props.data.personal):multipleRowSlidesLayoutMobile(this.props.data.personal)}
       </div>
+      <ul className="circles">
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+       </ul>
     </div>
   }
 }
